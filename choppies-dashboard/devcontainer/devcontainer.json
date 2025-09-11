@@ -1,0 +1,34 @@
+{
+    "name": "Choppies Dashboard Devbox",
+    "image": "node:18",
+    "customizations": {
+      "vscode": {
+        "settings": {
+          "terminal.integrated.defaultProfile.linux": "bash"
+        },
+        "extensions": [
+          "esbenp.prettier-vscode",
+          "dbaeumer.vscode-eslint"
+        ]
+      }
+    },
+    "tasks": {
+      "setup": [
+        {
+          "command": "npm install"
+        }
+      ],
+      "dev": [
+        {
+          "command": "npm run dev"
+        }
+      ]
+    },
+    "forwardPorts": [5173],
+    "remoteUser": "node",
+    "containerEnv": {
+      "VITE_SUPABASE_URL": "https://your-project-id.supabase.co",
+      "VITE_SUPABASE_ANON_KEY": "your-anon-public-key"
+    }
+  }
+  
