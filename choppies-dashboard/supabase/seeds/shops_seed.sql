@@ -1,0 +1,2 @@
+-- shops_seed.sql
+-- Insert shops here
