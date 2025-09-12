@@ -14,5 +14,8 @@
     "env": {
       "NODE_VERSION": "20"
     }
-  }
+  },
+  "orgId": "@vercel_org_id",
+  "projectId": "@vercel_project_id"
+}
 }
