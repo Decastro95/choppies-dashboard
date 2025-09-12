@@ -1,1 +1,0 @@
--- daily_sales_view.sql

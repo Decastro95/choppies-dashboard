@@ -1,2 +1,0 @@
--- choppies_full_seed.sql
--- Combined seeding script

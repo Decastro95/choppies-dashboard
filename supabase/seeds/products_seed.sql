@@ -1,2 +1,0 @@
--- products_seed.sql
--- Insert products here

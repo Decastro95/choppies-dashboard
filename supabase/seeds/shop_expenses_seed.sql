@@ -1,2 +1,0 @@
--- shop_expenses_seed.sql
--- Expenses here

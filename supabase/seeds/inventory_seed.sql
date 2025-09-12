@@ -1,2 +1,0 @@
--- inventory_seed.sql
--- Inventory movements here
