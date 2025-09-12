@@ -1,0 +1,1 @@
+-- damaged_goods_summary_view.sql

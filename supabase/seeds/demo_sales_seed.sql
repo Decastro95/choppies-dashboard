@@ -1,0 +1,2 @@
+-- demo_sales_seed.sql
+-- Demo sales transactions
