@@ -1,21 +1,15 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "vite.config.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "env": {
-    "VITE_SUPABASE_URL": "@vite_supabase_url",
-    "VITE_SUPABASE_ANON_KEY": "@vite_supabase_anon_key"
-  },
+  "buildCommand": "npm install && npm run build",
   "build": {
     "env": {
       "NODE_VERSION": "20"
     }
   },
+  "env": {
+    "VITE_SUPABASE_URL": "@vite_supabase_url",
+    "VITE_SUPABASE_ANON_KEY": "@vite_supabase_anon_key"
+  },
   "orgId": "@vercel_org_id",
   "projectId": "@vercel_project_id"
-}
 }
