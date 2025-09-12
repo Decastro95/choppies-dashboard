@@ -1,4 +1,3 @@
-// .eslintrc.cjs
 module.exports = {
   root: true,
   env: {
@@ -6,30 +5,37 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  parser: '@typescript-eslint/parser',
+  parser: "@typescript-eslint/parser",
   parserOptions: {
+    ecmaVersion: "latest",
+    sourceType: "module",
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 'latest',
-    sourceType: 'module',
   },
-  plugins: ['react', 'react-hooks', '@typescript-eslint'],
-  extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:react-hooks/recommended',
-    'plugin:@typescript-eslint/recommended',
-    'prettier',
-  ],
   settings: {
     react: {
-      version: 'detect',
+      version: "detect",
     },
   },
+  plugins: [
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "prettier"
+  ],
+  extends: [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
   rules: {
-    'react/react-in-jsx-scope': 'off', // not needed with React 17+
-    'react/prop-types': 'off',        // using TS, so prop-types not needed
-  },
+    "prettier/prettier": "warn",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error"],
+    "react/react-in-jsx-scope": "off", // Not needed with React 17+
+    "react/prop-types": "off"          // Using TypeScript types instead
+  }
 };
-

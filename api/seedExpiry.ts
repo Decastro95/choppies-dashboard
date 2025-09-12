@@ -1,29 +1,16 @@
-import { VercelRequest, VercelResponse } from "@vercel/node";
-import { createClient } from "@supabase/supabase-js";
+import { supabase } from "../src/supabaseClient";
 
-const supabase = createClient(
-  process.env.VITE_SUPABASE_URL as string,
-  process.env.SUPABASE_SERVICE_ROLE_KEY as string
-);
-
-export default async function handler(req: VercelRequest, res: VercelResponse) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
-  }
-
+export async function seedExpiry() {
   try {
-    const { data, error } = await supabase
-      .from("expiry")
-      .insert([
-        { product_name: "Milk 1L", expiry_date: "2025-09-30" },
-        { product_name: "Yoghurt Cup", expiry_date: "2025-09-20" },
-      ])
-      .select();
+    const { error } = await supabase.from("expiring_goods").insert([
+      { product_id: 1, expiry_date: "2025-09-30" },
+      { product_id: 2, expiry_date: "2025-09-25" },
+    ]);
 
-    if (error) return res.status(400).json({ error: error.message });
-
-    return res.status(200).json({ message: "Expiry data seeded", data });
-  } catch (err) {
-    return res.status(500).json({ error: "Internal server error" });
+    if (error) throw error;
+    console.log("✅ Expiring goods seeded successfully");
+  } catch (error: any) {
+    console.error("❌ Error seeding expiry:", error.message);
+    throw error;
   }
 }

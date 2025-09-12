@@ -1,29 +1,16 @@
-import { VercelRequest, VercelResponse } from "@vercel/node";
-import { createClient } from "@supabase/supabase-js";
+import { supabase } from "../src/supabaseClient";
 
-const supabase = createClient(
-  process.env.VITE_SUPABASE_URL as string,
-  process.env.SUPABASE_SERVICE_ROLE_KEY as string
-);
-
-export default async function handler(req: VercelRequest, res: VercelResponse) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
-  }
-
+export async function seedLowStock() {
   try {
-    const { data, error } = await supabase
-      .from("low_stock")
-      .insert([
-        { product_name: "Rice 5kg", current_stock: 3 },
-        { product_name: "Sugar 2kg", current_stock: 2 },
-      ])
-      .select();
+    const { error } = await supabase.from("low_stock").insert([
+      { product_id: 1, threshold: 10 },
+      { product_id: 3, threshold: 20 },
+    ]);
 
-    if (error) return res.status(400).json({ error: error.message });
-
-    return res.status(200).json({ message: "Low stock seeded", data });
-  } catch (err) {
-    return res.status(500).json({ error: "Internal server error" });
+    if (error) throw error;
+    console.log("✅ Low stock seeded successfully");
+  } catch (error: any) {
+    console.error("❌ Error seeding low stock:", error.message);
+    throw error;
   }
 }
