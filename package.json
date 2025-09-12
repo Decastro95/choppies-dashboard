@@ -7,17 +7,17 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint ."
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "test": "echo \"No tests defined\" && exit 0"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.45.0",
-    "@vitejs/plugin-react": "^4.3.0",
+    "autoprefixer": "^10.4.20",
     "lucide-react": "^0.446.0",
+    "postcss": "^8.4.47",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "tailwindcss": "^3.4.12",
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.47"
+    "tailwindcss": "^3.4.12"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
@@ -25,6 +25,6 @@
     "vite": "^5.4.8"
   },
   "engines": {
-    "node": "20.x"
+  "node": ">=20.0.0 <23.0.0"
   }
 }
