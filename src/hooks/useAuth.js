@@ -1,16 +1,14 @@
 import { useEffect, useState } from "react";
-import { supabase } from "./supabaseClient";
+import { supabase } from "../supabaseClient";
 
-function App() {
+export function useAuth() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    // Get current session
     supabase.auth.getSession().then(({ data: { session } }) => {
       setUser(session?.user ?? null);
     });
 
-    // Listen for changes
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       (_event, session) => {
         setUser(session?.user ?? null);
@@ -20,16 +18,5 @@ function App() {
     return () => subscription.unsubscribe();
   }, []);
 
-  return (
-    <div>
-      <h1>Choppies Dashboard</h1>
-      {user ? (
-        <p>✅ Logged in as {user.email}</p>
-      ) : (
-        <p>❌ Not logged in</p>
-      )}
-    </div>
-  );
+  return user;
 }
-
-export default App;
