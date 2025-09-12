@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { supabase } from "../../lib/supabaseClient"; // adjust path if different
+import { supabase } from "../../supabaseClient"; // adjust path if needed
 import { motion } from "framer-motion";
 import { TrendingUp, Users, Store, Package } from "lucide-react";
 
@@ -20,7 +20,7 @@ function KPICard({ icon: Icon, title, value, delta }) {
   );
 }
 
-export default function CeoDashboard() {
+export default function CeoDashboardContent() {
   const [loading, setLoading] = useState(true);
   const [summary, setSummary] = useState(null);
   const [regions, setRegions] = useState([]);
@@ -29,20 +29,18 @@ export default function CeoDashboard() {
     async function loadData() {
       setLoading(true);
 
-      // sales summary (assumes sales_summary_view has total_revenue, total_customers, active_shops, product_categories)
+      // sales summary
       const { data: summaryData, error: sumErr } = await supabase
         .from("sales_summary_view")
         .select("*")
         .maybeSingle();
-
       if (sumErr) console.error("Error loading summary:", sumErr);
 
-      // regional sales breakdown (daily_sales_view can be grouped by region if available)
+      // regional sales
       const { data: regionalData, error: regErr } = await supabase
         .from("daily_sales_view")
         .select("region, total_sales, transactions")
         .limit(10);
-
       if (regErr) console.error("Error loading regions:", regErr);
 
       setSummary(summaryData);
@@ -61,7 +59,9 @@ export default function CeoDashboard() {
             <h1 className="text-2xl font-extrabold">CEO Dashboard</h1>
             <p className="text-sm opacity-80">Choppies Namibia — Company Overview</p>
           </div>
-          <div className="text-sm font-medium">Generated: {new Date().toLocaleDateString()}</div>
+          <div className="text-sm font-medium">
+            Generated: {new Date().toLocaleDateString()}
+          </div>
         </div>
       </header>
 
@@ -124,7 +124,7 @@ export default function CeoDashboard() {
                   ))
                 ) : (
                   <tr>
-                    <td colSpan="3" className="py-6 text-slate-400">
+                    <td colSpan={3} className="py-6 text-slate-400">
                       No regional data yet
                     </td>
                   </tr>
@@ -137,4 +137,3 @@ export default function CeoDashboard() {
     </div>
   );
 }
-

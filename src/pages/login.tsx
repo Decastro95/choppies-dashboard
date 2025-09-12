@@ -1,44 +1,63 @@
 import { useState } from "react";
-import { useRouter } from "next/router";
 import { supabase } from "../supabaseClient";
-import { roleDashboardMap } from "../roles";
+import { useRouter } from "next/router";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState(null);
   const router = useRouter();
 
-  const handleLogin = async (e: React.FormEvent) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     setError(null);
 
-    const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+    const { data, error } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
+
     if (error) {
       setError(error.message);
       return;
     }
 
-    if (!data.user) {
-      setError("User not found.");
-      return;
+    if (data?.user) {
+      // Fetch user role from Supabase metadata
+      const { data: profile, error: profileError } = await supabase
+        .from("profiles")
+        .select("role")
+        .eq("id", data.user.id)
+        .maybeSingle();
+
+      if (profileError) {
+        setError("Failed to fetch user role");
+        return;
+      }
+
+      const role = profile?.role || data.user.user_metadata?.role;
+
+      // Redirect based on role
+      switch (role) {
+        case "ceo":
+          router.push("/dashboard/Ceo");
+          break;
+        case "manager":
+          router.push("/dashboard/Manager");
+          break;
+        case "cashier":
+          router.push("/dashboard/Cashier");
+          break;
+        case "supplier":
+          router.push("/dashboard/Supplier");
+          break;
+        case "admin":
+          router.push("/dashboard/Admin");
+          break;
+        default:
+          router.push("/unauthorized");
+      }
     }
-
-    // Fetch role from Supabase
-    const { data: profile, error: roleError } = await supabase
-      .from("profiles")
-      .select("role")
-      .eq("id", data.user.id)
-      .single();
-
-    if (roleError || !profile?.role) {
-      setError("Unable to determine user role.");
-      return;
-    }
-
-    const dashboard = roleDashboardMap[profile.role as keyof typeof roleDashboardMap];
-    if (dashboard) router.push(dashboard);
-    else setError("No dashboard assigned for your role.");
   };
 
   return (
@@ -49,7 +68,11 @@ export default function Login() {
       >
         <h2 className="mb-4 text-2xl font-bold">Login</h2>
 
-        {error && <p className="mb-2 text-sm text-red-500">{error}</p>}
+        {error && (
+          <p className="mb-2 text-sm text-red-500" role="alert">
+            {error}
+          </p>
+        )}
 
         <input
           type="email"

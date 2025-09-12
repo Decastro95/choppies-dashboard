@@ -1,10 +1,10 @@
-// roles.ts
-export type Role = 'CEO' | 'Manager' | 'Cashier' | 'Supplier' | 'Admin';
+export enum Roles {
+  CEO = "ceo",
+  MANAGER = "manager",
+  CASHIER = "cashier",
+  SUPPLIER = "supplier",
+  ADMIN = "admin",
+}
 
-export const roleDashboardMap: Record<Role, string> = {
-  CEO: '/dashboard/ceo',
-  Manager: '/dashboard/manager',
-  Cashier: '/dashboard/cashier',
-  Supplier: '/dashboard/supplier',
-  Admin: '/dashboard/admin',
-};
+export type Role = keyof typeof Roles;
+
