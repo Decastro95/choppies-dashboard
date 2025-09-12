@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { supabase } from "../../supabaseClient"; // adjust path if needed
+import { supabase } from "../../src/supabaseClient";
 import { motion } from "framer-motion";
 import { TrendingUp, Users, Store, Package } from "lucide-react";
 
@@ -28,21 +28,14 @@ export default function CeoDashboardContent() {
   useEffect(() => {
     async function loadData() {
       setLoading(true);
-
-      // sales summary
-      const { data: summaryData, error: sumErr } = await supabase
+      const { data: summaryData } = await supabase
         .from("sales_summary_view")
         .select("*")
         .maybeSingle();
-      if (sumErr) console.error("Error loading summary:", sumErr);
-
-      // regional sales
-      const { data: regionalData, error: regErr } = await supabase
+      const { data: regionalData } = await supabase
         .from("daily_sales_view")
         .select("region, total_sales, transactions")
         .limit(10);
-      if (regErr) console.error("Error loading regions:", regErr);
-
       setSummary(summaryData);
       setRegions(regionalData || []);
       setLoading(false);
@@ -52,20 +45,16 @@ export default function CeoDashboardContent() {
 
   return (
     <div className="p-6 max-w-full">
-      {/* Header */}
       <header className="bg-gradient-to-r from-red-600 to-red-700 text-white rounded-2xl p-6 mb-6 shadow-lg">
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-extrabold">CEO Dashboard</h1>
             <p className="text-sm opacity-80">Choppies Namibia — Company Overview</p>
           </div>
-          <div className="text-sm font-medium">
-            Generated: {new Date().toLocaleDateString()}
-          </div>
+          <div className="text-sm font-medium">Generated: {new Date().toLocaleDateString()}</div>
         </div>
       </header>
 
-      {/* KPI Cards */}
       <motion.section
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
@@ -75,28 +64,19 @@ export default function CeoDashboardContent() {
         <KPICard
           icon={TrendingUp}
           title="Total Revenue"
-          value={`N$${summary?.total_revenue?.toLocaleString() || "0"}`}
+          value={`N$${Number(summary?.total_revenue ?? 0).toLocaleString()}`}
           delta="+12% vs last month"
         />
-        <KPICard
-          icon={Store}
-          title="Active Shops"
-          value={summary?.active_shops || 0}
-        />
-        <KPICard
-          icon={Package}
-          title="Product Categories"
-          value={summary?.product_categories || 0}
-        />
+        <KPICard icon={Store} title="Active Shops" value={summary?.active_shops ?? 0} />
+        <KPICard icon={Package} title="Product Categories" value={summary?.product_categories ?? 0} />
         <KPICard
           icon={Users}
           title="Total Customers"
-          value={summary?.total_customers?.toLocaleString() || 0}
+          value={summary?.total_customers ?? 0}
           delta="+5% new"
         />
       </motion.section>
 
-      {/* Regional Overview */}
       <div className="bg-white rounded-2xl shadow p-6">
         <h2 className="text-lg font-bold mb-4">Regional Sales Overview</h2>
         {loading ? (
@@ -117,9 +97,9 @@ export default function CeoDashboardContent() {
                     <tr key={idx} className="border-t">
                       <td className="py-3 pr-4">{r.region || "Unknown"}</td>
                       <td className="py-3 pr-4 font-semibold">
-                        N${Number(r.total_sales || 0).toLocaleString()}
+                        N${Number(r.total_sales ?? 0).toLocaleString()}
                       </td>
-                      <td className="py-3 pr-4">{r.transactions || 0}</td>
+                      <td className="py-3 pr-4">{r.transactions ?? 0}</td>
                     </tr>
                   ))
                 ) : (
