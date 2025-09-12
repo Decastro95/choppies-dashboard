@@ -19,27 +19,23 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     ]);
 
     // Sales
-    await supabase
-      .from("sales")
-      .insert([
-        {
-          product_id: 1,
-          quantity: 2,
-          total_amount: 21,
-          sale_date: new Date().toISOString(),
-        },
-      ]);
+    await supabase.from("sales").insert([
+      {
+        product_id: 1,
+        quantity: 2,
+        total_amount: 21,
+        sale_date: new Date().toISOString(),
+      },
+    ]);
 
     // Damaged Goods
-    await supabase
-      .from("damaged_goods")
-      .insert([
-        {
-          product_name: "Cooking Oil 2L",
-          quantity: 2,
-          reason: "Leaking bottle",
-        },
-      ]);
+    await supabase.from("damaged_goods").insert([
+      {
+        product_name: "Cooking Oil 2L",
+        quantity: 2,
+        reason: "Leaking bottle",
+      },
+    ]);
 
     // Expiry
     await supabase

@@ -1,13 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx"; // keep as .jsx since App is JS, not TSX
+import App from "./App";
 import "./index.css";
 
-const root = document.getElementById("root") as HTMLElement;
+const rootElement = document.getElementById("root");
 
-ReactDOM.createRoot(root).render(
+if (!rootElement) {
+  throw new Error(
+    "Root element not found. Did you forget <div id='root'> in index.html?"
+  );
+}
+
+ReactDOM.createRoot(rootElement as HTMLElement).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
 );
-

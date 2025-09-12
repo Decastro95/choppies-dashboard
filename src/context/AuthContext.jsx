@@ -9,7 +9,9 @@ export function AuthProvider({ children }) {
 
   useEffect(() => {
     const getUser = async () => {
-      const { data: { user } } = await supabase.auth.getUser();
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
       setUser(user);
       setRole(user?.user_metadata?.role || null);
     };

@@ -13,12 +13,8 @@
         "editor.formatOnSave": true,
         "editor.tabSize": 2
       },
-      "extensions": [
-        "esbenp.prettier-vscode",
-        "dbaeumer.vscode-eslint"
-      ]
+      "extensions": ["esbenp.prettier-vscode", "dbaeumer.vscode-eslint"]
     }
   },
   "remoteUser": "node"
 }
-

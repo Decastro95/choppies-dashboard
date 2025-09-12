@@ -10,7 +10,8 @@ export default function ExpiringGoods() {
         .from("inventory")
         .select("*")
         .lt("expiry_date", new Date().toISOString()); // items expiring today or earlier
-      if (error) console.error("❌ Error loading expiring goods:", error.message);
+      if (error)
+        console.error("❌ Error loading expiring goods:", error.message);
       else setItems(data);
     }
     loadExpiringGoods();
