@@ -1,17 +1,7 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "vite.config.js",
-        "use": "@vercel/static-build",
-        "config": {
-          "distDir": "dist"
-        }
-      }
-    ],
+  "build": {
     "env": {
-      "VITE_SUPABASE_URL": "@vite_supabase_url",
-      "VITE_SUPABASE_ANON_KEY": "@vite_supabase_anon_key"
+      "NODE_VERSION": "20.19.0"
     }
   }
-  
+}
