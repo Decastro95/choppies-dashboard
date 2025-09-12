@@ -1,25 +1,44 @@
 import { useState } from "react";
+import { useRouter } from "next/router";
 import { supabase } from "../supabaseClient";
+import { roleDashboardMap } from "../roles";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
+  const router = useRouter();
 
-  const handleLogin = async (e) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
 
-    const { data, error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
-
+    const { data, error } = await supabase.auth.signInWithPassword({ email, password });
     if (error) {
       setError(error.message);
-    } else {
-      console.log("Logged in:", data.user);
+      return;
     }
+
+    if (!data.user) {
+      setError("User not found.");
+      return;
+    }
+
+    // Fetch role from Supabase
+    const { data: profile, error: roleError } = await supabase
+      .from("profiles")
+      .select("role")
+      .eq("id", data.user.id)
+      .single();
+
+    if (roleError || !profile?.role) {
+      setError("Unable to determine user role.");
+      return;
+    }
+
+    const dashboard = roleDashboardMap[profile.role as keyof typeof roleDashboardMap];
+    if (dashboard) router.push(dashboard);
+    else setError("No dashboard assigned for your role.");
   };
 
   return (
@@ -30,11 +49,7 @@ export default function Login() {
       >
         <h2 className="mb-4 text-2xl font-bold">Login</h2>
 
-        {error && (
-          <p className="mb-2 text-sm text-red-500" role="alert">
-            {error}
-          </p>
-        )}
+        {error && <p className="mb-2 text-sm text-red-500">{error}</p>}
 
         <input
           type="email"
@@ -61,3 +76,6 @@ export default function Login() {
           Login
         </button>
       </form>
+    </div>
+  );
+}
