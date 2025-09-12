@@ -7,40 +7,31 @@ on:
     branches: [main]
   schedule:
     - cron: "0 0 * * *" # every day at midnight UTC
-  workflow_dispatch: # manual trigger button in GitHub Actions
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Use Node.js 20.19.0
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20.19.0
           cache: npm
 
-      - name: Install dependencies (with audit fix)
-        run: |
-          npm install
-          npm audit fix || true
+      - name: Install dependencies
+        run: npm ci
 
-      - name: Lint
-        run: npm run lint --if-present
-
-      - name: Build
+      - name: Run build
         run: npm run build
 
       - name: Generate ERD diagrams
-        run: npm run erd
+        run: |
+          npx @mermaid-js/mermaid-cli -i docs/erd.mmd -o docs/erd.png
+          npx @mermaid-js/mermaid-cli -i docs/erd.mmd -o docs/erd.svg
 
-      - name: Commit ERD updates
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "chore: nightly auto-update ERD diagrams + npm audit fix [skip ci]"
-          file_pattern: |
-            docs/erd.png
-            docs/erd.svg
-            package-lock.json
+      - name: Auto-fix vulnerabilities
+        run: npm audit fix --force
