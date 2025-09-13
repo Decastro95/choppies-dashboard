@@ -32,5 +32,13 @@
     "tailwindcss": "^4.1.13",
     "typescript": "^5.5.4",
     "vite": "^5.4.2"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.css": "prettier --write",
+    "*.json": "prettier --write"
   }
 }
