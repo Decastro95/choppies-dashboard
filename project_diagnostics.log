@@ -1,159 +1,322 @@
-🔹 Project diagnostics started at Sat Sep 13 01:16:43 UTC 2025
-src/App.tsx(2,26): error TS2307: Cannot find module '../supabaseClient' or its corresponding type declarations.
-src/App.tsx(28,56): error TS7031: Binding element 'data' implicitly has an 'any' type.
-src/App.tsx(36,8): error TS7006: Parameter '_event' implicitly has an 'any' type.
-src/App.tsx(36,16): error TS7006: Parameter 'session' implicitly has an 'any' type.
+🔹 Project diagnostics started at Sat Sep 13 15:20:09 UTC 2025
+src/App.tsx(7,8): error TS7016: Could not find a declaration file for module 'react'. '/workspaces/choppies-dashboard/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+src/App.tsx(8,26): error TS2307: Cannot find module '../supabaseClient' or its corresponding type declarations.
+src/App.tsx(34,56): error TS7031: Binding element 'data' implicitly has an 'any' type.
+src/App.tsx(42,8): error TS7006: Parameter '_event' implicitly has an 'any' type.
+src/App.tsx(42,16): error TS7006: Parameter 'session' implicitly has an 'any' type.
+src/App.tsx(87,5): error TS7016: Could not find a declaration file for module 'react/jsx-runtime'. '/workspaces/choppies-dashboard/node_modules/react/jsx-runtime.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react/jsx-runtime';`
+src/components/ProtectedRoute.tsx(1,38): error TS7016: Could not find a declaration file for module 'react'. '/workspaces/choppies-dashboard/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
 src/components/ProtectedRoute.tsx(3,25): error TS2307: Cannot find module '../context/AuthContext' or its corresponding type declarations.
+src/components/ProtectedRoute.tsx(27,10): error TS7016: Could not find a declaration file for module 'react/jsx-runtime'. '/workspaces/choppies-dashboard/node_modules/react/jsx-runtime.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react/jsx-runtime';`
+src/main.tsx(1,19): error TS7016: Could not find a declaration file for module 'react'. '/workspaces/choppies-dashboard/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+src/main.tsx(2,22): error TS7016: Could not find a declaration file for module 'react-dom/client'. '/workspaces/choppies-dashboard/node_modules/react-dom/client.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/react-dom` if it exists or add a new declaration (.d.ts) file containing `declare module 'react-dom/client';`
 src/main.tsx(3,8): error TS1192: Module '"/workspaces/choppies-dashboard/src/App"' has no default export.
-src/pages/Dashboard/Admin.tsx(2,22): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
-src/pages/Dashboard/Admin.tsx(7,36): error TS2552: Cannot find name 'Roles'. Did you mean 'Role'?
+src/main.tsx(7,3): error TS7016: Could not find a declaration file for module 'react/jsx-runtime'. '/workspaces/choppies-dashboard/node_modules/react/jsx-runtime.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react/jsx-runtime';`
+src/pages/Dashboard/Admin.tsx(4,23): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
+src/pages/Dashboard/Admin.tsx(8,5): error TS7016: Could not find a declaration file for module 'react/jsx-runtime'. '/workspaces/choppies-dashboard/node_modules/react/jsx-runtime.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react/jsx-runtime';`
+src/pages/Dashboard/AdminDashboardContent.tsx(2,37): error TS7016: Could not find a declaration file for module 'react'. '/workspaces/choppies-dashboard/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+src/pages/Dashboard/AdminDashboardContent.tsx(4,26): error TS2306: File '/workspaces/choppies-dashboard/src/types/supabase.ts' is not a module.
 src/pages/Dashboard/AdminDashboardContent.tsx(6,23): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
-src/pages/Dashboard/AdminDashboardContent.tsx(20,15): error TS2558: Expected 2 type arguments, but got 1.
-src/pages/Dashboard/AdminDashboardContent.tsx(23,15): error TS2558: Expected 2 type arguments, but got 1.
-src/pages/Dashboard/AdminDashboardContent.tsx(26,24): error TS2345: Argument of type '((never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError...' is not assignable to parameter of type 'SetStateAction<{ product_name: string; days_to_expiry: number; }[]>'.
-  Type '((never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError...' is not assignable to type '{ product_name: string; days_to_expiry: number; }[]'.
-    Type '(never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...' is not assignable to type '{ product_name: string; days_to_expiry: number; }'.
-      Type '(never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<string, unknown> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...> : SelectQueryError<...>) | SelectQueryError<...>' is not assignable to type '{ product_name: string; days_to_expiry: number; }'.
-        Type 'never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<string, unknown> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...> : SelectQueryError<...>' is not assignable to type '{ product_name: string; days_to_expiry: number; }'.
-          Type 'SelectQueryError<"Processing node failed."> | SelectQueryError<"Could not retrieve a valid record or error value">' is not assignable to type '{ product_name: string; days_to_expiry: number; }'.
-            Type '{ error: true; } & String' is missing the following properties from type '{ product_name: string; days_to_expiry: number; }': product_name, days_to_expiry
-src/pages/Dashboard/AdminDashboardContent.tsx(27,23): error TS2345: Argument of type '((never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError...' is not assignable to parameter of type 'SetStateAction<{ product_name: string; quantity: number; }[]>'.
-  Type '((never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError...' is not assignable to type '{ product_name: string; quantity: number; }[]'.
-    Type '(never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...' is not assignable to type '{ product_name: string; quantity: number; }'.
-      Type 'SelectQueryError<"Invalid RelationName cannot infer result type"> | (never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...> : SelectQu...' is not assignable to type '{ product_name: string; quantity: number; }'.
-        Type '{ error: true; } & String' is missing the following properties from type '{ product_name: string; quantity: number; }': product_name, quantity
-src/pages/Dashboard/Cashier.tsx(2,22): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
-src/pages/Dashboard/Cashier.tsx(8,36): error TS2552: Cannot find name 'Roles'. Did you mean 'Role'?
+src/pages/Dashboard/AdminDashboardContent.tsx(7,29): error TS2307: Cannot find module '../../context/AuthContext' or its corresponding type declarations.
+src/pages/Dashboard/AdminDashboardContent.tsx(22,15): error TS2558: Expected 2 type arguments, but got 1.
+src/pages/Dashboard/AdminDashboardContent.tsx(25,15): error TS2558: Expected 2 type arguments, but got 1.
+src/pages/Dashboard/AdminDashboardContent.tsx(36,5): error TS7016: Could not find a declaration file for module 'react/jsx-runtime'. '/workspaces/choppies-dashboard/node_modules/react/jsx-runtime.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react/jsx-runtime';`
+src/pages/Dashboard/AdminDashboardContent.tsx(37,7): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/AdminDashboardContent.tsx(38,9): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/AdminDashboardContent.tsx(38,64): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/AdminDashboardContent.tsx(40,11): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/AdminDashboardContent.tsx(40,24): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/AdminDashboardContent.tsx(42,11): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/AdminDashboardContent.tsx(43,13): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/AdminDashboardContent.tsx(44,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/AdminDashboardContent.tsx(44,68): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/AdminDashboardContent.tsx(45,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/AdminDashboardContent.tsx(46,37): error TS7006: Parameter 'item' implicitly has an 'any' type.
+src/pages/Dashboard/AdminDashboardContent.tsx(46,43): error TS7006: Parameter 'idx' implicitly has an 'any' type.
+src/pages/Dashboard/AdminDashboardContent.tsx(47,19): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/AdminDashboardContent.tsx(49,19): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/AdminDashboardContent.tsx(51,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/AdminDashboardContent.tsx(52,13): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/AdminDashboardContent.tsx(53,13): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/AdminDashboardContent.tsx(54,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/AdminDashboardContent.tsx(54,67): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/AdminDashboardContent.tsx(55,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/AdminDashboardContent.tsx(56,36): error TS7006: Parameter 'item' implicitly has an 'any' type.
+src/pages/Dashboard/AdminDashboardContent.tsx(56,42): error TS7006: Parameter 'idx' implicitly has an 'any' type.
+src/pages/Dashboard/AdminDashboardContent.tsx(57,19): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/AdminDashboardContent.tsx(59,19): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/AdminDashboardContent.tsx(61,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/AdminDashboardContent.tsx(62,13): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/AdminDashboardContent.tsx(63,11): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/AdminDashboardContent.tsx(65,7): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/Cashier.tsx(4,23): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
+src/pages/Dashboard/Cashier.tsx(8,5): error TS7016: Could not find a declaration file for module 'react/jsx-runtime'. '/workspaces/choppies-dashboard/node_modules/react/jsx-runtime.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react/jsx-runtime';`
+src/pages/Dashboard/CashierDashboardContent.tsx(2,37): error TS7016: Could not find a declaration file for module 'react'. '/workspaces/choppies-dashboard/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+src/pages/Dashboard/CashierDashboardContent.tsx(4,26): error TS2306: File '/workspaces/choppies-dashboard/src/types/supabase.ts' is not a module.
 src/pages/Dashboard/CashierDashboardContent.tsx(6,23): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
-src/pages/Dashboard/CashierDashboardContent.tsx(21,53): error TS2558: Expected 2 type arguments, but got 1.
-src/pages/Dashboard/CashierDashboardContent.tsx(22,53): error TS2558: Expected 2 type arguments, but got 1.
-src/pages/Dashboard/CashierDashboardContent.tsx(23,56): error TS2558: Expected 2 type arguments, but got 1.
-src/pages/Dashboard/CashierDashboardContent.tsx(25,18): error TS2345: Argument of type 'SelectQueryError<"Invalid RelationName cannot infer result type"> | SelectQueryError<"Processing node failed."> | SelectQueryError<"Could not retrieve a valid record or error value"> | null' is not assignable to parameter of type 'SetStateAction<{ total_revenue: number; total_customers: number; active_shops: number; product_categories: number; } | null>'.
-  Type 'SelectQueryError<"Invalid RelationName cannot infer result type">' is not assignable to type 'SetStateAction<{ total_revenue: number; total_customers: number; active_shops: number; product_categories: number; } | null>'.
-src/pages/Dashboard/CashierDashboardContent.tsx(26,18): error TS2345: Argument of type '((never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError...' is not assignable to parameter of type 'SetStateAction<{ product_name: string; quantity: number; }[]>'.
-  Type '((never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError...' is not assignable to type '{ product_name: string; quantity: number; }[]'.
-    Type '(never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...' is not assignable to type '{ product_name: string; quantity: number; }'.
-      Type 'SelectQueryError<"Invalid RelationName cannot infer result type"> | (never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...> : SelectQu...' is not assignable to type '{ product_name: string; quantity: number; }'.
-        Type '{ error: true; } & String' is missing the following properties from type '{ product_name: string; quantity: number; }': product_name, quantity
-src/pages/Dashboard/CashierDashboardContent.tsx(27,18): error TS2345: Argument of type '((never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError...' is not assignable to parameter of type 'SetStateAction<{ product_name: string; quantity: number; }[]>'.
-  Type '((never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError...' is not assignable to type '{ product_name: string; quantity: number; }[]'.
-    Type '(never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...' is not assignable to type '{ product_name: string; quantity: number; }'.
-      Type 'SelectQueryError<"Invalid RelationName cannot infer result type"> | (never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...> : SelectQu...' is not assignable to type '{ product_name: string; quantity: number; }'.
-        Type '{ error: true; } & String' is missing the following properties from type '{ product_name: string; quantity: number; }': product_name, quantity
-src/pages/Dashboard/Ceo.tsx(2,22): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
-src/pages/Dashboard/Ceo.tsx(7,36): error TS2552: Cannot find name 'Roles'. Did you mean 'Role'?
+src/pages/Dashboard/CashierDashboardContent.tsx(7,29): error TS2307: Cannot find module '../../context/AuthContext' or its corresponding type declarations.
+src/pages/Dashboard/CashierDashboardContent.tsx(24,15): error TS2558: Expected 2 type arguments, but got 1.
+src/pages/Dashboard/CashierDashboardContent.tsx(28,15): error TS2558: Expected 2 type arguments, but got 1.
+src/pages/Dashboard/CashierDashboardContent.tsx(31,15): error TS2558: Expected 2 type arguments, but got 1.
+src/pages/Dashboard/CashierDashboardContent.tsx(43,5): error TS7016: Could not find a declaration file for module 'react/jsx-runtime'. '/workspaces/choppies-dashboard/node_modules/react/jsx-runtime.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react/jsx-runtime';`
+src/pages/Dashboard/CashierDashboardContent.tsx(44,7): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CashierDashboardContent.tsx(45,9): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CashierDashboardContent.tsx(45,66): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CashierDashboardContent.tsx(47,11): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CashierDashboardContent.tsx(47,24): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CashierDashboardContent.tsx(49,11): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CashierDashboardContent.tsx(50,13): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CashierDashboardContent.tsx(51,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CashierDashboardContent.tsx(51,67): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CashierDashboardContent.tsx(52,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CashierDashboardContent.tsx(54,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CashierDashboardContent.tsx(55,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CashierDashboardContent.tsx(55,60): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CashierDashboardContent.tsx(56,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CashierDashboardContent.tsx(56,72): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CashierDashboardContent.tsx(57,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CashierDashboardContent.tsx(60,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CashierDashboardContent.tsx(61,13): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CashierDashboardContent.tsx(62,13): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CashierDashboardContent.tsx(63,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CashierDashboardContent.tsx(63,67): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CashierDashboardContent.tsx(64,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CashierDashboardContent.tsx(65,31): error TS7006: Parameter 'd' implicitly has an 'any' type.
+src/pages/Dashboard/CashierDashboardContent.tsx(65,34): error TS7006: Parameter 'idx' implicitly has an 'any' type.
+src/pages/Dashboard/CashierDashboardContent.tsx(66,19): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CashierDashboardContent.tsx(68,19): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CashierDashboardContent.tsx(70,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CashierDashboardContent.tsx(71,13): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CashierDashboardContent.tsx(72,13): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CashierDashboardContent.tsx(73,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CashierDashboardContent.tsx(73,61): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CashierDashboardContent.tsx(74,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CashierDashboardContent.tsx(75,31): error TS7006: Parameter 'r' implicitly has an 'any' type.
+src/pages/Dashboard/CashierDashboardContent.tsx(75,34): error TS7006: Parameter 'idx' implicitly has an 'any' type.
+src/pages/Dashboard/CashierDashboardContent.tsx(76,19): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CashierDashboardContent.tsx(78,19): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CashierDashboardContent.tsx(80,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CashierDashboardContent.tsx(81,13): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CashierDashboardContent.tsx(82,11): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CashierDashboardContent.tsx(84,7): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/Ceo.tsx(4,23): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
+src/pages/Dashboard/Ceo.tsx(8,5): error TS7016: Could not find a declaration file for module 'react/jsx-runtime'. '/workspaces/choppies-dashboard/node_modules/react/jsx-runtime.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react/jsx-runtime';`
+src/pages/Dashboard/CeoDashboardContent.tsx(2,37): error TS7016: Could not find a declaration file for module 'react'. '/workspaces/choppies-dashboard/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+src/pages/Dashboard/CeoDashboardContent.tsx(4,26): error TS2306: File '/workspaces/choppies-dashboard/src/types/supabase.ts' is not a module.
 src/pages/Dashboard/CeoDashboardContent.tsx(8,23): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
-src/pages/Dashboard/CeoDashboardContent.tsx(48,15): error TS2558: Expected 2 type arguments, but got 1.
-src/pages/Dashboard/CeoDashboardContent.tsx(55,15): error TS2558: Expected 2 type arguments, but got 1.
-src/pages/Dashboard/CeoDashboardContent.tsx(61,18): error TS2345: Argument of type 'SelectQueryError<"Invalid RelationName cannot infer result type"> | SelectQueryError<"Processing node failed."> | SelectQueryError<"Could not retrieve a valid record or error value"> | null' is not assignable to parameter of type 'SetStateAction<{ total_revenue: number; total_customers: number; active_shops: number; product_categories: number; } | null>'.
-  Type 'SelectQueryError<"Invalid RelationName cannot infer result type">' is not assignable to type 'SetStateAction<{ total_revenue: number; total_customers: number; active_shops: number; product_categories: number; } | null>'.
-src/pages/Dashboard/CeoDashboardContent.tsx(62,18): error TS2345: Argument of type '((never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError...' is not assignable to parameter of type 'SetStateAction<{ region: string; total_sales: number; transactions: number; }[]>'.
-  Type '((never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError...' is not assignable to type '{ region: string; total_sales: number; transactions: number; }[]'.
-    Type '(never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...' is not assignable to type '{ region: string; total_sales: number; transactions: number; }'.
-      Type 'SelectQueryError<"Invalid RelationName cannot infer result type"> | (never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...> : SelectQu...' is not assignable to type '{ region: string; total_sales: number; transactions: number; }'.
-        Type '{ error: true; } & String' is missing the following properties from type '{ region: string; total_sales: number; transactions: number; }': region, total_sales, transactions
-src/pages/Dashboard/Manager.tsx(2,22): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
-src/pages/Dashboard/Manager.tsx(7,36): error TS2552: Cannot find name 'Roles'. Did you mean 'Role'?
-src/pages/Dashboard/ManagerDashboardContent.tsx(6,23): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
-src/pages/Dashboard/ManagerDashboardContent.tsx(22,15): error TS2558: Expected 2 type arguments, but got 1.
-src/pages/Dashboard/ManagerDashboardContent.tsx(25,53): error TS2558: Expected 2 type arguments, but got 1.
-src/pages/Dashboard/ManagerDashboardContent.tsx(26,53): error TS2558: Expected 2 type arguments, but got 1.
-src/pages/Dashboard/ManagerDashboardContent.tsx(28,18): error TS2345: Argument of type 'SelectQueryError<"Invalid RelationName cannot infer result type"> | SelectQueryError<"Processing node failed."> | SelectQueryError<"Could not retrieve a valid record or error value"> | null' is not assignable to parameter of type 'SetStateAction<{ total_revenue: number; total_customers: number; active_shops: number; product_categories: number; } | null>'.
-  Type 'SelectQueryError<"Invalid RelationName cannot infer result type">' is not assignable to type 'SetStateAction<{ total_revenue: number; total_customers: number; active_shops: number; product_categories: number; } | null>'.
-src/pages/Dashboard/ManagerDashboardContent.tsx(29,19): error TS2345: Argument of type '((never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError...' is not assignable to parameter of type 'SetStateAction<{ product_name: string; quantity: number; }[]>'.
-  Type '((never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError...' is not assignable to type '{ product_name: string; quantity: number; }[]'.
-    Type '(never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...' is not assignable to type '{ product_name: string; quantity: number; }'.
-      Type 'SelectQueryError<"Invalid RelationName cannot infer result type"> | (never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...> : SelectQu...' is not assignable to type '{ product_name: string; quantity: number; }'.
-        Type '{ error: true; } & String' is missing the following properties from type '{ product_name: string; quantity: number; }': product_name, quantity
-src/pages/Dashboard/ManagerDashboardContent.tsx(30,19): error TS2345: Argument of type '((never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError...' is not assignable to parameter of type 'SetStateAction<{ product_name: string; days_to_expiry: number; }[]>'.
-  Type '((never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError...' is not assignable to type '{ product_name: string; days_to_expiry: number; }[]'.
-    Type '(never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...' is not assignable to type '{ product_name: string; days_to_expiry: number; }'.
-      Type '(never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<string, unknown> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...> : SelectQueryError<...>) | SelectQueryError<...>' is not assignable to type '{ product_name: string; days_to_expiry: number; }'.
-        Type 'never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<string, unknown> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...> : SelectQueryError<...>' is not assignable to type '{ product_name: string; days_to_expiry: number; }'.
-          Type 'SelectQueryError<"Processing node failed."> | SelectQueryError<"Could not retrieve a valid record or error value">' is not assignable to type '{ product_name: string; days_to_expiry: number; }'.
-            Type '{ error: true; } & String' is missing the following properties from type '{ product_name: string; days_to_expiry: number; }': product_name, days_to_expiry
-src/pages/Dashboard/Supplier.tsx(2,22): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
-src/pages/Dashboard/Supplier.tsx(7,36): error TS2552: Cannot find name 'Roles'. Did you mean 'Role'?
+src/pages/Dashboard/CeoDashboardContent.tsx(9,29): error TS2307: Cannot find module '../../context/AuthContext' or its corresponding type declarations.
+src/pages/Dashboard/CeoDashboardContent.tsx(16,9): error TS2503: Cannot find namespace 'React'.
+src/pages/Dashboard/CeoDashboardContent.tsx(24,5): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(24,5): error TS7016: Could not find a declaration file for module 'react/jsx-runtime'. '/workspaces/choppies-dashboard/node_modules/react/jsx-runtime.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react/jsx-runtime';`
+src/pages/Dashboard/CeoDashboardContent.tsx(25,7): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(26,9): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(28,9): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(29,9): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(29,69): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(30,7): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(31,7): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(31,75): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(32,17): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(32,81): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(33,5): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(47,15): error TS2558: Expected 2 type arguments, but got 1.
+src/pages/Dashboard/CeoDashboardContent.tsx(53,15): error TS2558: Expected 2 type arguments, but got 1.
+src/pages/Dashboard/CeoDashboardContent.tsx(67,7): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(69,9): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(70,11): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(71,13): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(72,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(72,68): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(73,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(73,84): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(74,13): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(75,13): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(77,13): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(78,11): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(79,9): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(105,9): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(106,11): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(106,73): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(108,13): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(108,55): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(110,13): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(111,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(112,17): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(113,19): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(114,21): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(114,53): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(115,21): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(115,54): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(116,21): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(116,59): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(117,19): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(118,17): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(119,17): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(121,34): error TS7006: Parameter 'r' implicitly has an 'any' type.
+src/pages/Dashboard/CeoDashboardContent.tsx(121,37): error TS7006: Parameter 'idx' implicitly has an 'any' type.
+src/pages/Dashboard/CeoDashboardContent.tsx(122,23): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(123,25): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(123,74): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(124,25): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(126,25): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(127,25): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(127,72): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(128,23): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(131,21): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(132,23): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(134,23): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(135,21): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(137,17): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(138,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(139,13): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(141,9): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/CeoDashboardContent.tsx(142,7): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/Manager.tsx(4,23): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
+src/pages/Dashboard/Manager.tsx(8,5): error TS7016: Could not find a declaration file for module 'react/jsx-runtime'. '/workspaces/choppies-dashboard/node_modules/react/jsx-runtime.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react/jsx-runtime';`
+src/pages/Dashboard/ManagerDashboardContent.tsx(1,37): error TS7016: Could not find a declaration file for module 'react'. '/workspaces/choppies-dashboard/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+src/pages/Dashboard/ManagerDashboardContent.tsx(3,26): error TS2306: File '/workspaces/choppies-dashboard/src/types/supabase.ts' is not a module.
+src/pages/Dashboard/ManagerDashboardContent.tsx(5,23): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
+src/pages/Dashboard/ManagerDashboardContent.tsx(6,29): error TS2307: Cannot find module '../../context/AuthContext' or its corresponding type declarations.
+src/pages/Dashboard/ManagerDashboardContent.tsx(23,15): error TS2558: Expected 2 type arguments, but got 1.
+src/pages/Dashboard/ManagerDashboardContent.tsx(27,15): error TS2558: Expected 2 type arguments, but got 1.
+src/pages/Dashboard/ManagerDashboardContent.tsx(30,15): error TS2558: Expected 2 type arguments, but got 1.
+src/pages/Dashboard/ManagerDashboardContent.tsx(42,5): error TS7016: Could not find a declaration file for module 'react/jsx-runtime'. '/workspaces/choppies-dashboard/node_modules/react/jsx-runtime.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react/jsx-runtime';`
+src/pages/Dashboard/ManagerDashboardContent.tsx(43,7): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/ManagerDashboardContent.tsx(44,9): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/ManagerDashboardContent.tsx(44,66): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/ManagerDashboardContent.tsx(46,11): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/ManagerDashboardContent.tsx(46,24): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/ManagerDashboardContent.tsx(48,11): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/ManagerDashboardContent.tsx(49,13): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/ManagerDashboardContent.tsx(50,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/ManagerDashboardContent.tsx(50,67): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/ManagerDashboardContent.tsx(51,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/ManagerDashboardContent.tsx(53,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/ManagerDashboardContent.tsx(54,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/ManagerDashboardContent.tsx(54,60): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/ManagerDashboardContent.tsx(55,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/ManagerDashboardContent.tsx(55,72): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/ManagerDashboardContent.tsx(56,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/ManagerDashboardContent.tsx(58,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/ManagerDashboardContent.tsx(59,13): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/ManagerDashboardContent.tsx(60,13): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/ManagerDashboardContent.tsx(61,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/ManagerDashboardContent.tsx(61,63): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/ManagerDashboardContent.tsx(62,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/ManagerDashboardContent.tsx(63,32): error TS7006: Parameter 'item' implicitly has an 'any' type.
+src/pages/Dashboard/ManagerDashboardContent.tsx(63,38): error TS7006: Parameter 'idx' implicitly has an 'any' type.
+src/pages/Dashboard/ManagerDashboardContent.tsx(64,19): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/ManagerDashboardContent.tsx(66,19): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/ManagerDashboardContent.tsx(68,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/ManagerDashboardContent.tsx(69,13): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/ManagerDashboardContent.tsx(70,13): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/ManagerDashboardContent.tsx(71,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/ManagerDashboardContent.tsx(71,68): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/ManagerDashboardContent.tsx(72,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/ManagerDashboardContent.tsx(73,32): error TS7006: Parameter 'item' implicitly has an 'any' type.
+src/pages/Dashboard/ManagerDashboardContent.tsx(73,38): error TS7006: Parameter 'idx' implicitly has an 'any' type.
+src/pages/Dashboard/ManagerDashboardContent.tsx(74,19): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/ManagerDashboardContent.tsx(76,19): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/ManagerDashboardContent.tsx(78,15): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/ManagerDashboardContent.tsx(79,13): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/ManagerDashboardContent.tsx(80,11): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/ManagerDashboardContent.tsx(82,7): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/Supplier.tsx(4,23): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
+src/pages/Dashboard/Supplier.tsx(8,5): error TS7016: Could not find a declaration file for module 'react/jsx-runtime'. '/workspaces/choppies-dashboard/node_modules/react/jsx-runtime.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react/jsx-runtime';`
+src/pages/Dashboard/SupplierDashboardContent.tsx(2,37): error TS7016: Could not find a declaration file for module 'react'. '/workspaces/choppies-dashboard/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
+src/pages/Dashboard/SupplierDashboardContent.tsx(4,26): error TS2306: File '/workspaces/choppies-dashboard/src/types/supabase.ts' is not a module.
 src/pages/Dashboard/SupplierDashboardContent.tsx(6,23): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
-src/pages/Dashboard/SupplierDashboardContent.tsx(17,44): error TS2558: Expected 2 type arguments, but got 1.
-src/pages/Dashboard/SupplierDashboardContent.tsx(18,17): error TS2345: Argument of type '((never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError...' is not assignable to parameter of type 'SetStateAction<{ id: number; order_number: string; status: string; created_at: string; }[]>'.
-  Type '((never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError...' is not assignable to type '{ id: number; order_number: string; status: string; created_at: string; }[]'.
-    Type '(never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...' is not assignable to type '{ id: number; order_number: string; status: string; created_at: string; }'.
-      Type 'SelectQueryError<"Invalid RelationName cannot infer result type"> | (never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...> : SelectQu...' is not assignable to type '{ id: number; order_number: string; status: string; created_at: string; }'.
-        Type '{ error: true; } & String' is missing the following properties from type '{ id: number; order_number: string; status: string; created_at: string; }': id, order_number, status, created_at
+src/pages/Dashboard/SupplierDashboardContent.tsx(7,29): error TS2307: Cannot find module '../../context/AuthContext' or its corresponding type declarations.
+src/pages/Dashboard/SupplierDashboardContent.tsx(19,15): error TS2558: Expected 2 type arguments, but got 1.
+src/pages/Dashboard/SupplierDashboardContent.tsx(28,5): error TS7016: Could not find a declaration file for module 'react/jsx-runtime'. '/workspaces/choppies-dashboard/node_modules/react/jsx-runtime.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react/jsx-runtime';`
+src/pages/Dashboard/SupplierDashboardContent.tsx(29,7): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/SupplierDashboardContent.tsx(30,9): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/SupplierDashboardContent.tsx(30,67): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/SupplierDashboardContent.tsx(32,11): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/SupplierDashboardContent.tsx(32,24): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/SupplierDashboardContent.tsx(34,11): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/SupplierDashboardContent.tsx(35,13): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/SupplierDashboardContent.tsx(35,67): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/SupplierDashboardContent.tsx(36,13): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/SupplierDashboardContent.tsx(37,28): error TS7006: Parameter 'o' implicitly has an 'any' type.
+src/pages/Dashboard/SupplierDashboardContent.tsx(37,31): error TS7006: Parameter 'idx' implicitly has an 'any' type.
+src/pages/Dashboard/SupplierDashboardContent.tsx(38,17): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/SupplierDashboardContent.tsx(40,17): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/SupplierDashboardContent.tsx(42,13): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/SupplierDashboardContent.tsx(43,11): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/Dashboard/SupplierDashboardContent.tsx(45,7): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/login.tsx(1,26): error TS7016: Could not find a declaration file for module 'react'. '/workspaces/choppies-dashboard/node_modules/react/index.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react';`
 src/pages/login.tsx(3,27): error TS2307: Cannot find module 'next/router' or its corresponding type declarations.
 src/pages/login.tsx(11,30): error TS7006: Parameter 'e' implicitly has an 'any' type.
-src/pages/login.tsx(21,16): error TS2345: Argument of type 'string' is not assignable to parameter of type 'SetStateAction<null>'.
-src/pages/login.tsx(34,18): error TS2345: Argument of type '"Failed to fetch user role"' is not assignable to parameter of type 'SetStateAction<null>'.
-src/pages/login.tsx(38,29): error TS2339: Property 'role' does not exist on type 'never'.
+src/pages/login.tsx(64,5): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/login.tsx(64,5): error TS7016: Could not find a declaration file for module 'react/jsx-runtime'. '/workspaces/choppies-dashboard/node_modules/react/jsx-runtime.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react/jsx-runtime';`
+src/pages/login.tsx(65,7): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/login.tsx(69,9): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/login.tsx(69,54): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/login.tsx(72,11): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/login.tsx(74,11): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/login.tsx(77,9): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/login.tsx(82,22): error TS7006: Parameter 'e' implicitly has an 'any' type.
+src/pages/login.tsx(86,9): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/login.tsx(91,22): error TS7006: Parameter 'e' implicitly has an 'any' type.
+src/pages/login.tsx(95,9): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/login.tsx(100,9): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/login.tsx(101,7): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/login.tsx(102,5): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/unauthorized.tsx(3,5): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/unauthorized.tsx(3,5): error TS7016: Could not find a declaration file for module 'react/jsx-runtime'. '/workspaces/choppies-dashboard/node_modules/react/jsx-runtime.js' implicitly has an 'any' type.
+  Try `npm i --save-dev @types/react` if it exists or add a new declaration (.d.ts) file containing `declare module 'react/jsx-runtime';`
+src/pages/unauthorized.tsx(4,7): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/unauthorized.tsx(4,74): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/unauthorized.tsx(5,7): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/unauthorized.tsx(5,72): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/unauthorized.tsx(6,7): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/unauthorized.tsx(11,7): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/pages/unauthorized.tsx(12,5): error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+src/supabaseClient.ts(3,31): error TS2306: File '/workspaces/choppies-dashboard/src/types/supabase.ts' is not a module.
 ❌ TypeScript check failed.
 
 🟢 Running ESLint...
 
-/workspaces/choppies-dashboard/src/App.tsx
-   1:9   warning  Replace `·createContext,·useContext,·useEffect,·useState,·ReactNode·` with `⏎··createContext,⏎··useContext,⏎··useEffect,⏎··useState,⏎··ReactNode,⏎`  prettier/prettier
-  28:11  error    'session' is assigned a value but never used                                                                                                         @typescript-eslint/no-unused-vars
+Oops! Something went wrong! :(
 
-/workspaces/choppies-dashboard/src/components/ProtectedRoute.tsx
-  11:41  warning  Replace `·children,·allowedRoles·` with `⏎··children,⏎··allowedRoles,⏎`  prettier/prettier
+ESLint: 8.57.1
 
-/workspaces/choppies-dashboard/src/pages/Dashboard/Admin.tsx
-   2:10  error    'Role' is defined but never used  @typescript-eslint/no-unused-vars
-  12:1   warning  Delete `⏎`                        prettier/prettier
+ESLint couldn't find the plugin "eslint-plugin-react".
 
-/workspaces/choppies-dashboard/src/pages/Dashboard/Cashier.tsx
-  2:10  error    'Role' is defined but never used  @typescript-eslint/no-unused-vars
-  5:1   warning  Delete `⏎`                        prettier/prettier
+(The package "eslint-plugin-react" was not found when loaded as a Node module from the directory "/workspaces/choppies-dashboard".)
 
-/workspaces/choppies-dashboard/src/pages/Dashboard/CashierDashboardContent.tsx
-  21:47  warning  Replace `.from<SalesSummary>("sales_summary_view").select("*")` with `⏎········.from<SalesSummary>("sales_summary_view")⏎········.select("*")⏎········`                                                                                                                                               prettier/prettier
-  22:47  warning  Replace `.from<DamagedGoods>("damaged_goods_view")` with `⏎········.from<DamagedGoods>("damaged_goods_view")⏎········`                                                                                                                                                                                prettier/prettier
-  23:50  warning  Replace `.from<Returns>("returns_view")` with `⏎········.from<Returns>("returns_view")⏎········`                                                                                                                                                                                                      prettier/prettier
-  37:20  warning  Replace `<p>Loading...</p>` with `(⏎··········<p>Loading...</p>⏎········)`                                                                                                                                                                                                                            prettier/prettier
-  41:18  warning  Replace `Total·Revenue:·N${summary?.total_revenue?.toLocaleString()·||·0}` with `⏎················Total·Revenue:·N${summary?.total_revenue?.toLocaleString()·||·0}⏎··············`                                                                                                                    prettier/prettier
-  44:18  warning  Replace `Total·Customers:·{summary?.total_customers?.toLocaleString()·||·0}` with `⏎················Total·Customers:{"·"}⏎················{summary?.total_customers?.toLocaleString()·||·0}⏎··············`                                                                                           prettier/prettier
-  48:19  warning  Replace `{damaged.map((d,·idx)·=>·<li·key={idx}>{d.product_name}·—·Qty:·{d.quantity}</li>)}` with `⏎················{damaged.map((d,·idx)·=>·(⏎··················<li·key={idx}>⏎····················{d.product_name}·—·Qty:·{d.quantity}⏎··················</li>⏎················))}⏎··············`  prettier/prettier
-  52:19  warning  Replace `{returns.map((r,·idx)·=>·<li·key={idx}>{r.product_name}·—·Qty:·{r.quantity}</li>)}` with `⏎················{returns.map((r,·idx)·=>·(⏎··················<li·key={idx}>⏎····················{r.product_name}·—·Qty:·{r.quantity}⏎··················</li>⏎················))}⏎··············`  prettier/prettier
+It's likely that the plugin isn't installed correctly. Try reinstalling by running the following:
 
-/workspaces/choppies-dashboard/src/pages/Dashboard/Ceo.tsx
-  2:10  error  'Role' is defined but never used  @typescript-eslint/no-unused-vars
+    npm install eslint-plugin-react@latest --save-dev
 
-/workspaces/choppies-dashboard/src/pages/Dashboard/CeoDashboardContent.tsx
-  19:9   error    Unexpected any. Specify a different type                                                                                                                                          @typescript-eslint/no-explicit-any
-  33:17  warning  Replace `<div·className="mt-1·text-xs·text-green-600·font-medium">{delta}</div>` with `(⏎········<div·className="mt-1·text-xs·text-green-600·font-medium">{delta}</div>⏎······)`  prettier/prettier
-  76:49  warning  Replace `Choppies·Namibia·—·Company·Overview` with `⏎················Choppies·Namibia·—·Company·Overview⏎··············`                                                          prettier/prettier
+The plugin "eslint-plugin-react" was referenced from the config file in ".eslintrc.cjs".
 
-/workspaces/choppies-dashboard/src/pages/Dashboard/Manager.tsx
-   2:10  error    'Role' is defined but never used  @typescript-eslint/no-unused-vars
-  12:1   warning  Delete `⏎`                        prettier/prettier
-
-/workspaces/choppies-dashboard/src/pages/Dashboard/ManagerDashboardContent.tsx
-  25:47  warning  Replace `.from<LowStock>("low_stock_view")` with `⏎········.from<LowStock>("low_stock_view")⏎········`                                                                                                       prettier/prettier
-  26:47  warning  Replace `.from<ExpiringGoods>("expiring_goods_view")` with `⏎········.from<ExpiringGoods>("expiring_goods_view")⏎········`                                                                                   prettier/prettier
-  46:18  warning  Replace `Total·Revenue:·N${summary?.total_revenue?.toLocaleString()·||·0}` with `⏎················Total·Revenue:·N${summary?.total_revenue?.toLocaleString()·||·0}⏎··············`                           prettier/prettier
-  49:18  warning  Replace `Total·Customers:·{summary?.total_customers?.toLocaleString()·||·0}` with `⏎················Total·Customers:{"·"}⏎················{summary?.total_customers?.toLocaleString()·||·0}⏎··············`  prettier/prettier
-  55:33  warning  Replace `{item.product_name}·—·Qty:·{item.quantity}` with `⏎····················{item.product_name}·—·Qty:·{item.quantity}⏎··················`                                                               prettier/prettier
-  63:33  warning  Replace `{item.product_name}·—·{item.days_to_expiry}·days·left` with `⏎····················{item.product_name}·—·{item.days_to_expiry}·days·left⏎··················`                                         prettier/prettier
-  73:1   warning  Delete `⏎`                                                                                                                                                                                                   prettier/prettier
-
-/workspaces/choppies-dashboard/src/pages/Dashboard/Supplier.tsx
-   2:10  error    'Role' is defined but never used  @typescript-eslint/no-unused-vars
-  12:1   warning  Delete `⏎`                        prettier/prettier
-
-/workspaces/choppies-dashboard/src/pages/Dashboard/SupplierDashboardContent.tsx
-  17:38  warning  Replace `.from<PurchaseOrders>("purchase_orders")` with `⏎········.from<PurchaseOrders>("purchase_orders")⏎········`                                                                                                                                                      prettier/prettier
-  28:20  warning  Replace `<p>Loading...</p>` with `(⏎··········<p>Loading...</p>⏎········)`                                                                                                                                                                                                prettier/prettier
-  31:17  warning  Replace `{orders.map((o,·idx)·=>·<li·key={idx}>{o.order_number}·—·{o.status}</li>)}` with `⏎··············{orders.map((o,·idx)·=>·(⏎················<li·key={idx}>⏎··················{o.order_number}·—·{o.status}⏎················</li>⏎··············))}⏎············`  prettier/prettier
-
-/workspaces/choppies-dashboard/src/pages/unauthorized.tsx
-  15:1  warning  Delete `⏎`  prettier/prettier
-
-/workspaces/choppies-dashboard/src/supabaseClient.ts
-  2:30  warning  Replace `'@supabase/supabase-js'` with `"@supabase/supabase-js"`  prettier/prettier
-  3:31  warning  Replace `'./types/supabase'` with `"./types/supabase"`            prettier/prettier
-
-✖ 36 problems (7 errors, 29 warnings)
-  0 errors and 29 warnings potentially fixable with the `--fix` option.
+If you still can't figure out the problem, please stop by https://eslint.org/chat/help to chat with the team.
 
 ❌ ESLint found issues.
 
@@ -165,7 +328,7 @@ Visit http://localhost:3000 and check your dashboards for runtime errors.
 
 Port 5173 is in use, trying another one...
 
-  VITE v5.4.20  ready in 336 ms
+  VITE v5.4.20  ready in 247 ms
 
   ➜  Local:   http://localhost:5174/
   ➜  Network: use --host to expose

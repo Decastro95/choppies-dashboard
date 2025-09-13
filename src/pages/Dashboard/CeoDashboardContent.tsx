@@ -1,7 +1,7 @@
 // src/pages/Dashboard/CeoDashboardContent.tsx
 import { useEffect, useState } from "react";
 import { supabase } from "../../supabaseClient";
-import { Database } from "../../types/supabase";
+import { Database } from "../../supabase";
 import { motion } from "framer-motion";
 import { TrendingUp, Users, Store, Package } from "lucide-react";
 import ProtectedRoute from "../../components/ProtectedRoute";

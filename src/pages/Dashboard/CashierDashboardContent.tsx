@@ -1,7 +1,7 @@
 // src/pages/Dashboard/CashierDashboardContent.tsx
 import { useEffect, useState } from "react";
 import { supabase } from "../../supabaseClient";
-import { Database } from "../../types/supabase";
+import { Database } from "../../supabase";
 import ProtectedRoute from "../../components/ProtectedRoute";
 import { Roles } from "../../roles";
 import { AuthContext } from "../../context/AuthContext"; // fixed path
