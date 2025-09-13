@@ -1,44 +1,96 @@
-🔹 Project diagnostics started at Fri Sep 12 23:38:53 UTC 2025
-src/app.tsx(2,26): error TS2307: Cannot find module '../supabaseClient' or its corresponding type declarations.
-src/app.tsx(28,56): error TS7031: Binding element 'data' implicitly has an 'any' type.
-src/app.tsx(36,8): error TS7006: Parameter '_event' implicitly has an 'any' type.
-src/app.tsx(36,16): error TS7006: Parameter 'session' implicitly has an 'any' type.
-src/components/ProtectedRoute.tsx(2,27): error TS2307: Cannot find module 'next/router' or its corresponding type declarations.
+🔹 Project diagnostics started at Sat Sep 13 01:16:43 UTC 2025
+src/App.tsx(2,26): error TS2307: Cannot find module '../supabaseClient' or its corresponding type declarations.
+src/App.tsx(28,56): error TS7031: Binding element 'data' implicitly has an 'any' type.
+src/App.tsx(36,8): error TS7006: Parameter '_event' implicitly has an 'any' type.
+src/App.tsx(36,16): error TS7006: Parameter 'session' implicitly has an 'any' type.
 src/components/ProtectedRoute.tsx(3,25): error TS2307: Cannot find module '../context/AuthContext' or its corresponding type declarations.
-src/components/ProtectedRoute.tsx(4,22): error TS2307: Cannot find module '../roles' or its corresponding type declarations.
-src/main.tsx(3,17): error TS2307: Cannot find module './App' or its corresponding type declarations.
-src/pages/Dashboard/Admin.tsx(2,23): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
-src/pages/Dashboard/AdminDashboardContent.tsx(2,26): error TS2307: Cannot find module '../../src/supabaseClient' or its corresponding type declarations.
-src/pages/Dashboard/Cashier.tsx(2,23): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
-src/pages/Dashboard/CashierDashboardContent.tsx(2,26): error TS2307: Cannot find module '../../src/supabaseClient' or its corresponding type declarations.
-src/pages/Dashboard/Ceo.tsx(2,23): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
-src/pages/Dashboard/CeoDashboardContent.tsx(2,26): error TS2307: Cannot find module '../../src/supabaseClient' or its corresponding type declarations.
-src/pages/Dashboard/CeoDashboardContent.tsx(3,24): error TS2307: Cannot find module 'framer-motion' or its corresponding type declarations.
-src/pages/Dashboard/CeoDashboardContent.tsx(6,26): error TS7031: Binding element 'Icon' implicitly has an 'any' type.
-src/pages/Dashboard/CeoDashboardContent.tsx(6,32): error TS7031: Binding element 'title' implicitly has an 'any' type.
-src/pages/Dashboard/CeoDashboardContent.tsx(6,39): error TS7031: Binding element 'value' implicitly has an 'any' type.
-src/pages/Dashboard/CeoDashboardContent.tsx(6,46): error TS7031: Binding element 'delta' implicitly has an 'any' type.
-src/pages/Dashboard/CeoDashboardContent.tsx(67,39): error TS2339: Property 'total_revenue' does not exist on type 'never'.
-src/pages/Dashboard/CeoDashboardContent.tsx(70,10): error TS2741: Property 'delta' is missing in type '{ icon: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>; title: string; value: any; }' but required in type '{ icon: any; title: any; value: any; delta: any; }'.
-src/pages/Dashboard/CeoDashboardContent.tsx(70,68): error TS2339: Property 'active_shops' does not exist on type 'never'.
-src/pages/Dashboard/CeoDashboardContent.tsx(71,10): error TS2741: Property 'delta' is missing in type '{ icon: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>; title: string; value: any; }' but required in type '{ icon: any; title: any; value: any; delta: any; }'.
-src/pages/Dashboard/CeoDashboardContent.tsx(71,76): error TS2339: Property 'product_categories' does not exist on type 'never'.
-src/pages/Dashboard/CeoDashboardContent.tsx(75,27): error TS2339: Property 'total_customers' does not exist on type 'never'.
-src/pages/Dashboard/CeoDashboardContent.tsx(98,52): error TS2339: Property 'region' does not exist on type 'never'.
-src/pages/Dashboard/CeoDashboardContent.tsx(100,37): error TS2339: Property 'total_sales' does not exist on type 'never'.
-src/pages/Dashboard/CeoDashboardContent.tsx(102,52): error TS2339: Property 'transactions' does not exist on type 'never'.
-src/pages/Dashboard/Manager.tsx(2,23): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
-src/pages/Dashboard/ManagerDashboardContent.tsx(2,26): error TS2307: Cannot find module '../../src/supabaseClient' or its corresponding type declarations.
-src/pages/Dashboard/Supplier.tsx(2,23): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
+src/main.tsx(3,8): error TS1192: Module '"/workspaces/choppies-dashboard/src/App"' has no default export.
+src/pages/Dashboard/Admin.tsx(2,22): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
+src/pages/Dashboard/Admin.tsx(7,36): error TS2552: Cannot find name 'Roles'. Did you mean 'Role'?
+src/pages/Dashboard/AdminDashboardContent.tsx(6,23): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
+src/pages/Dashboard/AdminDashboardContent.tsx(20,15): error TS2558: Expected 2 type arguments, but got 1.
+src/pages/Dashboard/AdminDashboardContent.tsx(23,15): error TS2558: Expected 2 type arguments, but got 1.
+src/pages/Dashboard/AdminDashboardContent.tsx(26,24): error TS2345: Argument of type '((never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError...' is not assignable to parameter of type 'SetStateAction<{ product_name: string; days_to_expiry: number; }[]>'.
+  Type '((never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError...' is not assignable to type '{ product_name: string; days_to_expiry: number; }[]'.
+    Type '(never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...' is not assignable to type '{ product_name: string; days_to_expiry: number; }'.
+      Type '(never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<string, unknown> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...> : SelectQueryError<...>) | SelectQueryError<...>' is not assignable to type '{ product_name: string; days_to_expiry: number; }'.
+        Type 'never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<string, unknown> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...> : SelectQueryError<...>' is not assignable to type '{ product_name: string; days_to_expiry: number; }'.
+          Type 'SelectQueryError<"Processing node failed."> | SelectQueryError<"Could not retrieve a valid record or error value">' is not assignable to type '{ product_name: string; days_to_expiry: number; }'.
+            Type '{ error: true; } & String' is missing the following properties from type '{ product_name: string; days_to_expiry: number; }': product_name, days_to_expiry
+src/pages/Dashboard/AdminDashboardContent.tsx(27,23): error TS2345: Argument of type '((never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError...' is not assignable to parameter of type 'SetStateAction<{ product_name: string; quantity: number; }[]>'.
+  Type '((never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError...' is not assignable to type '{ product_name: string; quantity: number; }[]'.
+    Type '(never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...' is not assignable to type '{ product_name: string; quantity: number; }'.
+      Type 'SelectQueryError<"Invalid RelationName cannot infer result type"> | (never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...> : SelectQu...' is not assignable to type '{ product_name: string; quantity: number; }'.
+        Type '{ error: true; } & String' is missing the following properties from type '{ product_name: string; quantity: number; }': product_name, quantity
+src/pages/Dashboard/Cashier.tsx(2,22): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
+src/pages/Dashboard/Cashier.tsx(8,36): error TS2552: Cannot find name 'Roles'. Did you mean 'Role'?
+src/pages/Dashboard/CashierDashboardContent.tsx(6,23): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
+src/pages/Dashboard/CashierDashboardContent.tsx(21,53): error TS2558: Expected 2 type arguments, but got 1.
+src/pages/Dashboard/CashierDashboardContent.tsx(22,53): error TS2558: Expected 2 type arguments, but got 1.
+src/pages/Dashboard/CashierDashboardContent.tsx(23,56): error TS2558: Expected 2 type arguments, but got 1.
+src/pages/Dashboard/CashierDashboardContent.tsx(25,18): error TS2345: Argument of type 'SelectQueryError<"Invalid RelationName cannot infer result type"> | SelectQueryError<"Processing node failed."> | SelectQueryError<"Could not retrieve a valid record or error value"> | null' is not assignable to parameter of type 'SetStateAction<{ total_revenue: number; total_customers: number; active_shops: number; product_categories: number; } | null>'.
+  Type 'SelectQueryError<"Invalid RelationName cannot infer result type">' is not assignable to type 'SetStateAction<{ total_revenue: number; total_customers: number; active_shops: number; product_categories: number; } | null>'.
+src/pages/Dashboard/CashierDashboardContent.tsx(26,18): error TS2345: Argument of type '((never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError...' is not assignable to parameter of type 'SetStateAction<{ product_name: string; quantity: number; }[]>'.
+  Type '((never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError...' is not assignable to type '{ product_name: string; quantity: number; }[]'.
+    Type '(never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...' is not assignable to type '{ product_name: string; quantity: number; }'.
+      Type 'SelectQueryError<"Invalid RelationName cannot infer result type"> | (never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...> : SelectQu...' is not assignable to type '{ product_name: string; quantity: number; }'.
+        Type '{ error: true; } & String' is missing the following properties from type '{ product_name: string; quantity: number; }': product_name, quantity
+src/pages/Dashboard/CashierDashboardContent.tsx(27,18): error TS2345: Argument of type '((never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError...' is not assignable to parameter of type 'SetStateAction<{ product_name: string; quantity: number; }[]>'.
+  Type '((never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError...' is not assignable to type '{ product_name: string; quantity: number; }[]'.
+    Type '(never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...' is not assignable to type '{ product_name: string; quantity: number; }'.
+      Type 'SelectQueryError<"Invalid RelationName cannot infer result type"> | (never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...> : SelectQu...' is not assignable to type '{ product_name: string; quantity: number; }'.
+        Type '{ error: true; } & String' is missing the following properties from type '{ product_name: string; quantity: number; }': product_name, quantity
+src/pages/Dashboard/Ceo.tsx(2,22): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
+src/pages/Dashboard/Ceo.tsx(7,36): error TS2552: Cannot find name 'Roles'. Did you mean 'Role'?
+src/pages/Dashboard/CeoDashboardContent.tsx(8,23): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
+src/pages/Dashboard/CeoDashboardContent.tsx(48,15): error TS2558: Expected 2 type arguments, but got 1.
+src/pages/Dashboard/CeoDashboardContent.tsx(55,15): error TS2558: Expected 2 type arguments, but got 1.
+src/pages/Dashboard/CeoDashboardContent.tsx(61,18): error TS2345: Argument of type 'SelectQueryError<"Invalid RelationName cannot infer result type"> | SelectQueryError<"Processing node failed."> | SelectQueryError<"Could not retrieve a valid record or error value"> | null' is not assignable to parameter of type 'SetStateAction<{ total_revenue: number; total_customers: number; active_shops: number; product_categories: number; } | null>'.
+  Type 'SelectQueryError<"Invalid RelationName cannot infer result type">' is not assignable to type 'SetStateAction<{ total_revenue: number; total_customers: number; active_shops: number; product_categories: number; } | null>'.
+src/pages/Dashboard/CeoDashboardContent.tsx(62,18): error TS2345: Argument of type '((never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError...' is not assignable to parameter of type 'SetStateAction<{ region: string; total_sales: number; transactions: number; }[]>'.
+  Type '((never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError...' is not assignable to type '{ region: string; total_sales: number; transactions: number; }[]'.
+    Type '(never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...' is not assignable to type '{ region: string; total_sales: number; transactions: number; }'.
+      Type 'SelectQueryError<"Invalid RelationName cannot infer result type"> | (never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...> : SelectQu...' is not assignable to type '{ region: string; total_sales: number; transactions: number; }'.
+        Type '{ error: true; } & String' is missing the following properties from type '{ region: string; total_sales: number; transactions: number; }': region, total_sales, transactions
+src/pages/Dashboard/Manager.tsx(2,22): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
+src/pages/Dashboard/Manager.tsx(7,36): error TS2552: Cannot find name 'Roles'. Did you mean 'Role'?
+src/pages/Dashboard/ManagerDashboardContent.tsx(6,23): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
+src/pages/Dashboard/ManagerDashboardContent.tsx(22,15): error TS2558: Expected 2 type arguments, but got 1.
+src/pages/Dashboard/ManagerDashboardContent.tsx(25,53): error TS2558: Expected 2 type arguments, but got 1.
+src/pages/Dashboard/ManagerDashboardContent.tsx(26,53): error TS2558: Expected 2 type arguments, but got 1.
+src/pages/Dashboard/ManagerDashboardContent.tsx(28,18): error TS2345: Argument of type 'SelectQueryError<"Invalid RelationName cannot infer result type"> | SelectQueryError<"Processing node failed."> | SelectQueryError<"Could not retrieve a valid record or error value"> | null' is not assignable to parameter of type 'SetStateAction<{ total_revenue: number; total_customers: number; active_shops: number; product_categories: number; } | null>'.
+  Type 'SelectQueryError<"Invalid RelationName cannot infer result type">' is not assignable to type 'SetStateAction<{ total_revenue: number; total_customers: number; active_shops: number; product_categories: number; } | null>'.
+src/pages/Dashboard/ManagerDashboardContent.tsx(29,19): error TS2345: Argument of type '((never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError...' is not assignable to parameter of type 'SetStateAction<{ product_name: string; quantity: number; }[]>'.
+  Type '((never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError...' is not assignable to type '{ product_name: string; quantity: number; }[]'.
+    Type '(never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...' is not assignable to type '{ product_name: string; quantity: number; }'.
+      Type 'SelectQueryError<"Invalid RelationName cannot infer result type"> | (never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...> : SelectQu...' is not assignable to type '{ product_name: string; quantity: number; }'.
+        Type '{ error: true; } & String' is missing the following properties from type '{ product_name: string; quantity: number; }': product_name, quantity
+src/pages/Dashboard/ManagerDashboardContent.tsx(30,19): error TS2345: Argument of type '((never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError...' is not assignable to parameter of type 'SetStateAction<{ product_name: string; days_to_expiry: number; }[]>'.
+  Type '((never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError...' is not assignable to type '{ product_name: string; days_to_expiry: number; }[]'.
+    Type '(never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...' is not assignable to type '{ product_name: string; days_to_expiry: number; }'.
+      Type '(never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<string, unknown> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...> : SelectQueryError<...>) | SelectQueryError<...>' is not assignable to type '{ product_name: string; days_to_expiry: number; }'.
+        Type 'never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<string, unknown> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...> : SelectQueryError<...>' is not assignable to type '{ product_name: string; days_to_expiry: number; }'.
+          Type 'SelectQueryError<"Processing node failed."> | SelectQueryError<"Could not retrieve a valid record or error value">' is not assignable to type '{ product_name: string; days_to_expiry: number; }'.
+            Type '{ error: true; } & String' is missing the following properties from type '{ product_name: string; days_to_expiry: number; }': product_name, days_to_expiry
+src/pages/Dashboard/Supplier.tsx(2,22): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
+src/pages/Dashboard/Supplier.tsx(7,36): error TS2552: Cannot find name 'Roles'. Did you mean 'Role'?
+src/pages/Dashboard/SupplierDashboardContent.tsx(6,23): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
+src/pages/Dashboard/SupplierDashboardContent.tsx(17,44): error TS2558: Expected 2 type arguments, but got 1.
+src/pages/Dashboard/SupplierDashboardContent.tsx(18,17): error TS2345: Argument of type '((never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError...' is not assignable to parameter of type 'SetStateAction<{ id: number; order_number: string; status: string; created_at: string; }[]>'.
+  Type '((never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError...' is not assignable to type '{ id: number; order_number: string; status: string; created_at: string; }[]'.
+    Type '(never[TableName] extends { Relationships: infer R; } ? R : unknown) extends null ? never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...' is not assignable to type '{ id: number; order_number: string; status: string; created_at: string; }'.
+      Type 'SelectQueryError<"Invalid RelationName cannot infer result type"> | (never[TableName]["Row"] extends infer FieldResult ? FieldResult extends Record<...> ? { [K in keyof ({} & FieldResult)]: ({} & FieldResult)[K]; } : FieldResult extends SelectQueryError<...> ? SelectQueryError<...> : SelectQueryError<...> : SelectQu...' is not assignable to type '{ id: number; order_number: string; status: string; created_at: string; }'.
+        Type '{ error: true; } & String' is missing the following properties from type '{ id: number; order_number: string; status: string; created_at: string; }': id, order_number, status, created_at
 src/pages/login.tsx(3,27): error TS2307: Cannot find module 'next/router' or its corresponding type declarations.
 src/pages/login.tsx(11,30): error TS7006: Parameter 'e' implicitly has an 'any' type.
 src/pages/login.tsx(21,16): error TS2345: Argument of type 'string' is not assignable to parameter of type 'SetStateAction<null>'.
 src/pages/login.tsx(34,18): error TS2345: Argument of type '"Failed to fetch user role"' is not assignable to parameter of type 'SetStateAction<null>'.
+src/pages/login.tsx(38,29): error TS2339: Property 'role' does not exist on type 'never'.
 ❌ TypeScript check failed.
 
 🟢 Running ESLint...
 
-/workspaces/choppies-dashboard/src/app.tsx
+/workspaces/choppies-dashboard/src/App.tsx
    1:9   warning  Replace `·createContext,·useContext,·useEffect,·useState,·ReactNode·` with `⏎··createContext,⏎··useContext,⏎··useEffect,⏎··useState,⏎··ReactNode,⏎`  prettier/prettier
   28:11  error    'session' is assigned a value but never used                                                                                                         @typescript-eslint/no-unused-vars
 
@@ -46,42 +98,62 @@ src/pages/login.tsx(34,18): error TS2345: Argument of type '"Failed to fetch use
   11:41  warning  Replace `·children,·allowedRoles·` with `⏎··children,⏎··allowedRoles,⏎`  prettier/prettier
 
 /workspaces/choppies-dashboard/src/pages/Dashboard/Admin.tsx
-  12:1  warning  Delete `⏎`  prettier/prettier
+   2:10  error    'Role' is defined but never used  @typescript-eslint/no-unused-vars
+  12:1   warning  Delete `⏎`                        prettier/prettier
 
-/workspaces/choppies-dashboard/src/pages/Dashboard/AdminDashboardContent.tsx
-  13:43  warning  Replace `.from("expiring_goods_view").select("*")` with `⏎········.from("expiring_goods_view")⏎········.select("*")⏎········`  prettier/prettier
-  14:43  warning  Replace `.from("damaged_goods_view").select("*")` with `⏎········.from("damaged_goods_view")⏎········.select("*")⏎········`    prettier/prettier
+/workspaces/choppies-dashboard/src/pages/Dashboard/Cashier.tsx
+  2:10  error    'Role' is defined but never used  @typescript-eslint/no-unused-vars
+  5:1   warning  Delete `⏎`                        prettier/prettier
 
 /workspaces/choppies-dashboard/src/pages/Dashboard/CashierDashboardContent.tsx
-  13:43  warning  Replace `.from("sales_summary_view").select("*")` with `⏎········.from("sales_summary_view")⏎········.select("*")⏎········`  prettier/prettier
-  14:52  warning  Replace `.from("damaged_goods_view").select("*")` with `⏎········.from("damaged_goods_view")⏎········.select("*")⏎········`  prettier/prettier
-  15:50  warning  Replace `.from("returns_view").select("*")` with `⏎········.from("returns_view")⏎········.select("*")⏎········`              prettier/prettier
+  21:47  warning  Replace `.from<SalesSummary>("sales_summary_view").select("*")` with `⏎········.from<SalesSummary>("sales_summary_view")⏎········.select("*")⏎········`                                                                                                                                               prettier/prettier
+  22:47  warning  Replace `.from<DamagedGoods>("damaged_goods_view")` with `⏎········.from<DamagedGoods>("damaged_goods_view")⏎········`                                                                                                                                                                                prettier/prettier
+  23:50  warning  Replace `.from<Returns>("returns_view")` with `⏎········.from<Returns>("returns_view")⏎········`                                                                                                                                                                                                      prettier/prettier
+  37:20  warning  Replace `<p>Loading...</p>` with `(⏎··········<p>Loading...</p>⏎········)`                                                                                                                                                                                                                            prettier/prettier
+  41:18  warning  Replace `Total·Revenue:·N${summary?.total_revenue?.toLocaleString()·||·0}` with `⏎················Total·Revenue:·N${summary?.total_revenue?.toLocaleString()·||·0}⏎··············`                                                                                                                    prettier/prettier
+  44:18  warning  Replace `Total·Customers:·{summary?.total_customers?.toLocaleString()·||·0}` with `⏎················Total·Customers:{"·"}⏎················{summary?.total_customers?.toLocaleString()·||·0}⏎··············`                                                                                           prettier/prettier
+  48:19  warning  Replace `{damaged.map((d,·idx)·=>·<li·key={idx}>{d.product_name}·—·Qty:·{d.quantity}</li>)}` with `⏎················{damaged.map((d,·idx)·=>·(⏎··················<li·key={idx}>⏎····················{d.product_name}·—·Qty:·{d.quantity}⏎··················</li>⏎················))}⏎··············`  prettier/prettier
+  52:19  warning  Replace `{returns.map((r,·idx)·=>·<li·key={idx}>{r.product_name}·—·Qty:·{r.quantity}</li>)}` with `⏎················{returns.map((r,·idx)·=>·(⏎··················<li·key={idx}>⏎····················{r.product_name}·—·Qty:·{r.quantity}⏎··················</li>⏎················))}⏎··············`  prettier/prettier
+
+/workspaces/choppies-dashboard/src/pages/Dashboard/Ceo.tsx
+  2:10  error  'Role' is defined but never used  @typescript-eslint/no-unused-vars
 
 /workspaces/choppies-dashboard/src/pages/Dashboard/CeoDashboardContent.tsx
-  52:47  warning  Replace `Choppies·Namibia·—·Company·Overview` with `⏎··············Choppies·Namibia·—·Company·Overview⏎············`                                                                                                            prettier/prettier
-  54:48  warning  Replace `Generated:·{new·Date().toLocaleDateString()}` with `⏎············Generated:·{new·Date().toLocaleDateString()}⏎··········`                                                                                              prettier/prettier
-  70:17  warning  Replace `·icon={Store}·title="Active·Shops"·value={summary?.active_shops·??·0}` with `⏎··········icon={Store}⏎··········title="Active·Shops"⏎··········value={summary?.active_shops·??·0}⏎·······`                              prettier/prettier
-  71:17  warning  Replace `·icon={Package}·title="Product·Categories"·value={summary?.product_categories·??·0}` with `⏎··········icon={Package}⏎··········title="Product·Categories"⏎··········value={summary?.product_categories·??·0}⏎·······`  prettier/prettier
+  19:9   error    Unexpected any. Specify a different type                                                                                                                                          @typescript-eslint/no-explicit-any
+  33:17  warning  Replace `<div·className="mt-1·text-xs·text-green-600·font-medium">{delta}</div>` with `(⏎········<div·className="mt-1·text-xs·text-green-600·font-medium">{delta}</div>⏎······)`  prettier/prettier
+  76:49  warning  Replace `Choppies·Namibia·—·Company·Overview` with `⏎················Choppies·Namibia·—·Company·Overview⏎··············`                                                          prettier/prettier
 
 /workspaces/choppies-dashboard/src/pages/Dashboard/Manager.tsx
-  12:1  warning  Delete `⏎`  prettier/prettier
+   2:10  error    'Role' is defined but never used  @typescript-eslint/no-unused-vars
+  12:1   warning  Delete `⏎`                        prettier/prettier
 
 /workspaces/choppies-dashboard/src/pages/Dashboard/ManagerDashboardContent.tsx
-  13:49  warning  Replace `.from("sales_summary_view").select("*")` with `⏎········.from("sales_summary_view")⏎········.select("*")⏎········`    prettier/prettier
-  14:52  warning  Replace `.from("low_stock_view").select("*")` with `⏎········.from("low_stock_view")⏎········.select("*")⏎········`            prettier/prettier
-  15:52  warning  Replace `.from("expiring_goods_view").select("*")` with `⏎········.from("expiring_goods_view")⏎········.select("*")⏎········`  prettier/prettier
+  25:47  warning  Replace `.from<LowStock>("low_stock_view")` with `⏎········.from<LowStock>("low_stock_view")⏎········`                                                                                                       prettier/prettier
+  26:47  warning  Replace `.from<ExpiringGoods>("expiring_goods_view")` with `⏎········.from<ExpiringGoods>("expiring_goods_view")⏎········`                                                                                   prettier/prettier
+  46:18  warning  Replace `Total·Revenue:·N${summary?.total_revenue?.toLocaleString()·||·0}` with `⏎················Total·Revenue:·N${summary?.total_revenue?.toLocaleString()·||·0}⏎··············`                           prettier/prettier
+  49:18  warning  Replace `Total·Customers:·{summary?.total_customers?.toLocaleString()·||·0}` with `⏎················Total·Customers:{"·"}⏎················{summary?.total_customers?.toLocaleString()·||·0}⏎··············`  prettier/prettier
+  55:33  warning  Replace `{item.product_name}·—·Qty:·{item.quantity}` with `⏎····················{item.product_name}·—·Qty:·{item.quantity}⏎··················`                                                               prettier/prettier
+  63:33  warning  Replace `{item.product_name}·—·{item.days_to_expiry}·days·left` with `⏎····················{item.product_name}·—·{item.days_to_expiry}·days·left⏎··················`                                         prettier/prettier
+  73:1   warning  Delete `⏎`                                                                                                                                                                                                   prettier/prettier
 
 /workspaces/choppies-dashboard/src/pages/Dashboard/Supplier.tsx
-  12:1  warning  Delete `⏎`  prettier/prettier
+   2:10  error    'Role' is defined but never used  @typescript-eslint/no-unused-vars
+  12:1   warning  Delete `⏎`                        prettier/prettier
+
+/workspaces/choppies-dashboard/src/pages/Dashboard/SupplierDashboardContent.tsx
+  17:38  warning  Replace `.from<PurchaseOrders>("purchase_orders")` with `⏎········.from<PurchaseOrders>("purchase_orders")⏎········`                                                                                                                                                      prettier/prettier
+  28:20  warning  Replace `<p>Loading...</p>` with `(⏎··········<p>Loading...</p>⏎········)`                                                                                                                                                                                                prettier/prettier
+  31:17  warning  Replace `{orders.map((o,·idx)·=>·<li·key={idx}>{o.order_number}·—·{o.status}</li>)}` with `⏎··············{orders.map((o,·idx)·=>·(⏎················<li·key={idx}>⏎··················{o.order_number}·—·{o.status}⏎················</li>⏎··············))}⏎············`  prettier/prettier
 
 /workspaces/choppies-dashboard/src/pages/unauthorized.tsx
   15:1  warning  Delete `⏎`  prettier/prettier
 
 /workspaces/choppies-dashboard/src/supabaseClient.ts
   2:30  warning  Replace `'@supabase/supabase-js'` with `"@supabase/supabase-js"`  prettier/prettier
+  3:31  warning  Replace `'./types/supabase'` with `"./types/supabase"`            prettier/prettier
 
-✖ 20 problems (1 error, 19 warnings)
-  0 errors and 19 warnings potentially fixable with the `--fix` option.
+✖ 36 problems (7 errors, 29 warnings)
+  0 errors and 29 warnings potentially fixable with the `--fix` option.
 
 ❌ ESLint found issues.
 
@@ -92,10 +164,9 @@ Visit http://localhost:3000 and check your dashboards for runtime errors.
 > vite
 
 Port 5173 is in use, trying another one...
-Port 5174 is in use, trying another one...
 
-  VITE v5.4.20  ready in 239 ms
+  VITE v5.4.20  ready in 336 ms
 
-  ➜  Local:   http://localhost:5175/
+  ➜  Local:   http://localhost:5174/
   ➜  Network: use --host to expose
   ➜  press h + enter to show help

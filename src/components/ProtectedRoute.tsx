@@ -8,7 +8,10 @@ interface ProtectedRouteProps {
   allowedRoles: Role[];
 }
 
-export default function ProtectedRoute({ children, allowedRoles }: ProtectedRouteProps) {
+export default function ProtectedRoute({
+  children,
+  allowedRoles,
+}: ProtectedRouteProps) {
   const { user } = useAuth();
   const navigate = useNavigate();
 

@@ -1,7 +1,7 @@
+// src/pages/Dashboard/Cashier.tsx
 import ProtectedRoute from "../../components/ProtectedRoute";
-import { Role } from "../../roles"; // ✅ fixed
 import CashierDashboardContent from "./CashierDashboardContent";
-
+import { Roles } from "../../roles";
 
 export default function Cashier() {
   return (
@@ -10,3 +10,4 @@ export default function Cashier() {
     </ProtectedRoute>
   );
 }
+

@@ -6,21 +6,20 @@ import { motion } from "framer-motion";
 import { TrendingUp, Users, Store, Package } from "lucide-react";
 import ProtectedRoute from "../../components/ProtectedRoute";
 import { Roles } from "../../roles";
+import { AuthContext } from "../../context/AuthContext"; // fixed path
+
 
 type SalesSummary = Database["public"]["Views"]["sales_summary_view"]["Row"];
 type DailySales = Database["public"]["Views"]["daily_sales_view"]["Row"];
 
-function KPICard({
-  icon: Icon,
-  title,
-  value,
-  delta,
-}: {
-  icon: any;
+interface KPICardProps {
+  icon: React.ElementType;
   title: string;
   value: string | number;
   delta?: string;
-}) {
+}
+
+function KPICard({ icon: Icon, title, value, delta }: KPICardProps) {
   return (
     <div className="bg-white rounded-2xl shadow-md p-6 flex flex-col justify-between">
       <div className="flex items-center gap-3">
@@ -36,7 +35,7 @@ function KPICard({
 }
 
 export default function CeoDashboardContent() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState<boolean>(true);
   const [summary, setSummary] = useState<SalesSummary | null>(null);
   const [regions, setRegions] = useState<DailySales[]>([]);
 
@@ -48,14 +47,12 @@ export default function CeoDashboardContent() {
         .from<SalesSummary>("sales_summary_view")
         .select("*")
         .maybeSingle();
-
       if (sumErr) console.error("Error loading summary:", sumErr);
 
       const { data: regionalData, error: regErr } = await supabase
         .from<DailySales>("daily_sales_view")
         .select("*")
         .limit(10);
-
       if (regErr) console.error("Error loading regions:", regErr);
 
       setSummary(summaryData || null);
@@ -94,16 +91,8 @@ export default function CeoDashboardContent() {
             value={`N$${summary?.total_revenue?.toLocaleString() || "0"}`}
             delta="+12% vs last month"
           />
-          <KPICard
-            icon={Store}
-            title="Active Shops"
-            value={summary?.active_shops || 0}
-          />
-          <KPICard
-            icon={Package}
-            title="Product Categories"
-            value={summary?.product_categories || 0}
-          />
+          <KPICard icon={Store} title="Active Shops" value={summary?.active_shops || 0} />
+          <KPICard icon={Package} title="Product Categories" value={summary?.product_categories || 0} />
           <KPICard
             icon={Users}
             title="Total Customers"

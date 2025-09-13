@@ -13,9 +13,11 @@ export const AuthProvider = ({ children }) => {
       if (session) setUser(session.user);
     });
 
-    const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
-      setUser(session?.user || null);
-    });
+    const { data: listener } = supabase.auth.onAuthStateChange(
+      (_event, session) => {
+        setUser(session?.user || null);
+      }
+    );
 
     if (user) fetchRole(user.id);
 

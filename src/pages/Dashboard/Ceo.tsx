@@ -1,6 +1,7 @@
+// src/pages/Dashboard/Ceo.tsx
 import ProtectedRoute from "../../components/ProtectedRoute";
-import { Role } from "../../roles"; // ✅ fixed
 import CeoDashboardContent from "./CeoDashboardContent";
+import { Roles } from "../../roles";
 
 export default function Ceo() {
   return (

@@ -1,6 +1,7 @@
+// src/pages/Dashboard/Manager.tsx
 import ProtectedRoute from "../../components/ProtectedRoute";
-import { Role } from "../../roles"; // ✅ fixed
 import ManagerDashboardContent from "./ManagerDashboardContent";
+import { Roles } from "../../roles";
 
 export default function Manager() {
   return (

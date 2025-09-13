@@ -4,6 +4,8 @@ import { supabase } from "../../supabaseClient";
 import { Database } from "../../types/supabase";
 import ProtectedRoute from "../../components/ProtectedRoute";
 import { Roles } from "../../roles";
+import { AuthContext } from "../../context/AuthContext"; // fixed path
+
 
 type ExpiringGoods = Database["public"]["Views"]["expiring_goods_view"]["Row"];
 type DamagedGoods = Database["public"]["Views"]["damaged_goods_view"]["Row"];
@@ -11,7 +13,7 @@ type DamagedGoods = Database["public"]["Views"]["damaged_goods_view"]["Row"];
 export default function AdminDashboardContent() {
   const [expiringGoods, setExpiringGoods] = useState<ExpiringGoods[]>([]);
   const [damagedGoods, setDamagedGoods] = useState<DamagedGoods[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     async function loadData() {

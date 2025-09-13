@@ -1,6 +1,7 @@
+// src/pages/Dashboard/Supplier.tsx
 import ProtectedRoute from "../../components/ProtectedRoute";
-import { Role } from "../../roles"; // ✅ fixed
 import SupplierDashboardContent from "./SupplierDashboardContent";
+import { Roles } from "../../roles";
 
 export default function Supplier() {
   return (

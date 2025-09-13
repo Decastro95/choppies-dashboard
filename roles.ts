@@ -7,4 +7,3 @@ export enum Roles {
 }
 
 export type Role = keyof typeof Roles;
-
