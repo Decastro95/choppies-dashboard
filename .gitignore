@@ -1,1 +1,13 @@
-node_modules
+echo ".env*" >> .gitignore
+echo "!.env.example" >> .gitignore
+git add .gitignore
+git commit -m "Update .gitignore to ignore local env files"
+git push origin HEAD
+node_modules/
+dist/
+.env
+.env.local
+.env.production
+.env.preview
+.vscode/
+.DS_Store
