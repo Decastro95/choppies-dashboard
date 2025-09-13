@@ -1,13 +1,30 @@
-echo ".env*" >> .gitignore
-echo "!.env.example" >> .gitignore
-git add .gitignore
-git commit -m "Update .gitignore to ignore local env files"
-git push origin HEAD
+# Node
 node_modules/
+package-lock.json
+
+# Vite / build outputs
 dist/
+.vite/
+
+# Environment files
 .env
 .env.local
-.env.production
-.env.preview
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# VS Code
 .vscode/
+
+# Supabase
+supabase/.env
+
+# MacOS
 .DS_Store
+
+# Others
+*.tmp
