@@ -1,0 +1,101 @@
+🔹 Project diagnostics started at Fri Sep 12 23:38:53 UTC 2025
+src/app.tsx(2,26): error TS2307: Cannot find module '../supabaseClient' or its corresponding type declarations.
+src/app.tsx(28,56): error TS7031: Binding element 'data' implicitly has an 'any' type.
+src/app.tsx(36,8): error TS7006: Parameter '_event' implicitly has an 'any' type.
+src/app.tsx(36,16): error TS7006: Parameter 'session' implicitly has an 'any' type.
+src/components/ProtectedRoute.tsx(2,27): error TS2307: Cannot find module 'next/router' or its corresponding type declarations.
+src/components/ProtectedRoute.tsx(3,25): error TS2307: Cannot find module '../context/AuthContext' or its corresponding type declarations.
+src/components/ProtectedRoute.tsx(4,22): error TS2307: Cannot find module '../roles' or its corresponding type declarations.
+src/main.tsx(3,17): error TS2307: Cannot find module './App' or its corresponding type declarations.
+src/pages/Dashboard/Admin.tsx(2,23): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
+src/pages/Dashboard/AdminDashboardContent.tsx(2,26): error TS2307: Cannot find module '../../src/supabaseClient' or its corresponding type declarations.
+src/pages/Dashboard/Cashier.tsx(2,23): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
+src/pages/Dashboard/CashierDashboardContent.tsx(2,26): error TS2307: Cannot find module '../../src/supabaseClient' or its corresponding type declarations.
+src/pages/Dashboard/Ceo.tsx(2,23): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
+src/pages/Dashboard/CeoDashboardContent.tsx(2,26): error TS2307: Cannot find module '../../src/supabaseClient' or its corresponding type declarations.
+src/pages/Dashboard/CeoDashboardContent.tsx(3,24): error TS2307: Cannot find module 'framer-motion' or its corresponding type declarations.
+src/pages/Dashboard/CeoDashboardContent.tsx(6,26): error TS7031: Binding element 'Icon' implicitly has an 'any' type.
+src/pages/Dashboard/CeoDashboardContent.tsx(6,32): error TS7031: Binding element 'title' implicitly has an 'any' type.
+src/pages/Dashboard/CeoDashboardContent.tsx(6,39): error TS7031: Binding element 'value' implicitly has an 'any' type.
+src/pages/Dashboard/CeoDashboardContent.tsx(6,46): error TS7031: Binding element 'delta' implicitly has an 'any' type.
+src/pages/Dashboard/CeoDashboardContent.tsx(67,39): error TS2339: Property 'total_revenue' does not exist on type 'never'.
+src/pages/Dashboard/CeoDashboardContent.tsx(70,10): error TS2741: Property 'delta' is missing in type '{ icon: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>; title: string; value: any; }' but required in type '{ icon: any; title: any; value: any; delta: any; }'.
+src/pages/Dashboard/CeoDashboardContent.tsx(70,68): error TS2339: Property 'active_shops' does not exist on type 'never'.
+src/pages/Dashboard/CeoDashboardContent.tsx(71,10): error TS2741: Property 'delta' is missing in type '{ icon: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>; title: string; value: any; }' but required in type '{ icon: any; title: any; value: any; delta: any; }'.
+src/pages/Dashboard/CeoDashboardContent.tsx(71,76): error TS2339: Property 'product_categories' does not exist on type 'never'.
+src/pages/Dashboard/CeoDashboardContent.tsx(75,27): error TS2339: Property 'total_customers' does not exist on type 'never'.
+src/pages/Dashboard/CeoDashboardContent.tsx(98,52): error TS2339: Property 'region' does not exist on type 'never'.
+src/pages/Dashboard/CeoDashboardContent.tsx(100,37): error TS2339: Property 'total_sales' does not exist on type 'never'.
+src/pages/Dashboard/CeoDashboardContent.tsx(102,52): error TS2339: Property 'transactions' does not exist on type 'never'.
+src/pages/Dashboard/Manager.tsx(2,23): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
+src/pages/Dashboard/ManagerDashboardContent.tsx(2,26): error TS2307: Cannot find module '../../src/supabaseClient' or its corresponding type declarations.
+src/pages/Dashboard/Supplier.tsx(2,23): error TS2307: Cannot find module '../../roles' or its corresponding type declarations.
+src/pages/login.tsx(3,27): error TS2307: Cannot find module 'next/router' or its corresponding type declarations.
+src/pages/login.tsx(11,30): error TS7006: Parameter 'e' implicitly has an 'any' type.
+src/pages/login.tsx(21,16): error TS2345: Argument of type 'string' is not assignable to parameter of type 'SetStateAction<null>'.
+src/pages/login.tsx(34,18): error TS2345: Argument of type '"Failed to fetch user role"' is not assignable to parameter of type 'SetStateAction<null>'.
+❌ TypeScript check failed.
+
+🟢 Running ESLint...
+
+/workspaces/choppies-dashboard/src/app.tsx
+   1:9   warning  Replace `·createContext,·useContext,·useEffect,·useState,·ReactNode·` with `⏎··createContext,⏎··useContext,⏎··useEffect,⏎··useState,⏎··ReactNode,⏎`  prettier/prettier
+  28:11  error    'session' is assigned a value but never used                                                                                                         @typescript-eslint/no-unused-vars
+
+/workspaces/choppies-dashboard/src/components/ProtectedRoute.tsx
+  11:41  warning  Replace `·children,·allowedRoles·` with `⏎··children,⏎··allowedRoles,⏎`  prettier/prettier
+
+/workspaces/choppies-dashboard/src/pages/Dashboard/Admin.tsx
+  12:1  warning  Delete `⏎`  prettier/prettier
+
+/workspaces/choppies-dashboard/src/pages/Dashboard/AdminDashboardContent.tsx
+  13:43  warning  Replace `.from("expiring_goods_view").select("*")` with `⏎········.from("expiring_goods_view")⏎········.select("*")⏎········`  prettier/prettier
+  14:43  warning  Replace `.from("damaged_goods_view").select("*")` with `⏎········.from("damaged_goods_view")⏎········.select("*")⏎········`    prettier/prettier
+
+/workspaces/choppies-dashboard/src/pages/Dashboard/CashierDashboardContent.tsx
+  13:43  warning  Replace `.from("sales_summary_view").select("*")` with `⏎········.from("sales_summary_view")⏎········.select("*")⏎········`  prettier/prettier
+  14:52  warning  Replace `.from("damaged_goods_view").select("*")` with `⏎········.from("damaged_goods_view")⏎········.select("*")⏎········`  prettier/prettier
+  15:50  warning  Replace `.from("returns_view").select("*")` with `⏎········.from("returns_view")⏎········.select("*")⏎········`              prettier/prettier
+
+/workspaces/choppies-dashboard/src/pages/Dashboard/CeoDashboardContent.tsx
+  52:47  warning  Replace `Choppies·Namibia·—·Company·Overview` with `⏎··············Choppies·Namibia·—·Company·Overview⏎············`                                                                                                            prettier/prettier
+  54:48  warning  Replace `Generated:·{new·Date().toLocaleDateString()}` with `⏎············Generated:·{new·Date().toLocaleDateString()}⏎··········`                                                                                              prettier/prettier
+  70:17  warning  Replace `·icon={Store}·title="Active·Shops"·value={summary?.active_shops·??·0}` with `⏎··········icon={Store}⏎··········title="Active·Shops"⏎··········value={summary?.active_shops·??·0}⏎·······`                              prettier/prettier
+  71:17  warning  Replace `·icon={Package}·title="Product·Categories"·value={summary?.product_categories·??·0}` with `⏎··········icon={Package}⏎··········title="Product·Categories"⏎··········value={summary?.product_categories·??·0}⏎·······`  prettier/prettier
+
+/workspaces/choppies-dashboard/src/pages/Dashboard/Manager.tsx
+  12:1  warning  Delete `⏎`  prettier/prettier
+
+/workspaces/choppies-dashboard/src/pages/Dashboard/ManagerDashboardContent.tsx
+  13:49  warning  Replace `.from("sales_summary_view").select("*")` with `⏎········.from("sales_summary_view")⏎········.select("*")⏎········`    prettier/prettier
+  14:52  warning  Replace `.from("low_stock_view").select("*")` with `⏎········.from("low_stock_view")⏎········.select("*")⏎········`            prettier/prettier
+  15:52  warning  Replace `.from("expiring_goods_view").select("*")` with `⏎········.from("expiring_goods_view")⏎········.select("*")⏎········`  prettier/prettier
+
+/workspaces/choppies-dashboard/src/pages/Dashboard/Supplier.tsx
+  12:1  warning  Delete `⏎`  prettier/prettier
+
+/workspaces/choppies-dashboard/src/pages/unauthorized.tsx
+  15:1  warning  Delete `⏎`  prettier/prettier
+
+/workspaces/choppies-dashboard/src/supabaseClient.ts
+  2:30  warning  Replace `'@supabase/supabase-js'` with `"@supabase/supabase-js"`  prettier/prettier
+
+✖ 20 problems (1 error, 19 warnings)
+  0 errors and 19 warnings potentially fixable with the `--fix` option.
+
+❌ ESLint found issues.
+
+🟢 Starting Next.js dev server...
+Visit http://localhost:3000 and check your dashboards for runtime errors.
+
+> choppies-dashboard@1.0.0 dev
+> vite
+
+Port 5173 is in use, trying another one...
+Port 5174 is in use, trying another one...
+
+  VITE v5.4.20  ready in 239 ms
+
+  ➜  Local:   http://localhost:5175/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help

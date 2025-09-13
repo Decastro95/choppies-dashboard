@@ -1,5 +1,5 @@
 import ProtectedRoute from "../../components/ProtectedRoute";
-import { Roles } from "../../roles";
+import { Role } from "../../roles"; // ✅ fixed
 import AdminDashboardContent from "./AdminDashboardContent";
 
 export default function Admin() {

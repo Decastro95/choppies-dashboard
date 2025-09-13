@@ -1,5 +1,5 @@
 import ProtectedRoute from "../../components/ProtectedRoute";
-import { Roles } from "../../roles";
+import { Role } from "../../roles"; // ✅ fixed
 import CeoDashboardContent from "./CeoDashboardContent";
 
 export default function Ceo() {

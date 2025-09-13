@@ -1,17 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
+import App from "./App"; // ✅ Rename app.tsx → App.tsx
 import "./index.css";
 
-const rootElement = document.getElementById("root");
-
-if (!rootElement) {
-  throw new Error(
-    "Root element not found. Did you forget <div id='root'> in index.html?"
-  );
-}
-
-ReactDOM.createRoot(rootElement as HTMLElement).render(
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>

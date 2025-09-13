@@ -1,6 +1,7 @@
 import ProtectedRoute from "../../components/ProtectedRoute";
-import { Roles } from "../../roles";
+import { Role } from "../../roles"; // ✅ fixed
 import CashierDashboardContent from "./CashierDashboardContent";
+
 
 export default function Cashier() {
   return (

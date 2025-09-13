@@ -1,7 +1,7 @@
 import { ReactNode, useEffect } from "react";
-import { useRouter } from "next/router";
-import { useAuth } from "../context/AuthContext";
-import { Role } from "../roles";
+import { useNavigate } from "react-router-dom"; // ✅ instead of next/router
+import { useAuth } from "../context/AuthContext"; // ✅ correct path
+import { Role } from "../../roles"; // ✅ roles.ts is in project root
 
 interface ProtectedRouteProps {
   children: ReactNode;
@@ -10,15 +10,15 @@ interface ProtectedRouteProps {
 
 export default function ProtectedRoute({ children, allowedRoles }: ProtectedRouteProps) {
   const { user } = useAuth();
-  const router = useRouter();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!user) {
-      router.replace("/login");
+      navigate("/login");
     } else if (!allowedRoles.includes(user.role)) {
-      router.replace("/unauthorized");
+      navigate("/unauthorized");
     }
-  }, [user, allowedRoles, router]);
+  }, [user, allowedRoles, navigate]);
 
   if (!user || !allowedRoles.includes(user.role)) return null;
   return <>{children}</>;
