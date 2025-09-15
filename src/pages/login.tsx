@@ -1,101 +1,63 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { supabase } from "../supabaseClient";
-import { useRouter } from "next/router";
+import { useAuth } from "../hooks/useAuth";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(null);
-  const router = useRouter();
+  const [error, setError] = useState<string | null>(null);
+  const navigate = useNavigate();
+  const { user } = useAuth();
 
-  const handleLogin = async (e) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
 
-    const { data, error } = await supabase.auth.signInWithPassword({
+    const { error: loginError } = await supabase.auth.signInWithPassword({
       email,
       password,
     });
-
-    if (error) {
-      setError(error.message);
-      return;
-    }
-
-    if (data?.user) {
-      // Fetch user role from Supabase metadata
-      const { data: profile, error: profileError } = await supabase
-        .from("profiles")
-        .select("role")
-        .eq("id", data.user.id)
-        .maybeSingle();
-
-      if (profileError) {
-        setError("Failed to fetch user role");
-        return;
-      }
-
-      const role = profile?.role || data.user.user_metadata?.role;
-
+    if (loginError) {
+      setError(loginError.message);
+    } else {
       // Redirect based on role
-      switch (role) {
-        case "ceo":
-          router.push("/dashboard/Ceo");
-          break;
-        case "manager":
-          router.push("/dashboard/Manager");
-          break;
-        case "cashier":
-          router.push("/dashboard/Cashier");
-          break;
-        case "supplier":
-          router.push("/dashboard/Supplier");
-          break;
-        case "admin":
-          router.push("/dashboard/Admin");
-          break;
-        default:
-          router.push("/unauthorized");
-      }
+      const { data: userData } = await supabase.auth.getUser();
+      const role = userData?.user?.user_metadata?.role || "unknown";
+
+      if (role === "admin") navigate("/admin");
+      else if (role === "cashier") navigate("/cashier");
+      else if (role === "manager") navigate("/manager");
+      else if (role === "supplier") navigate("/supplier");
+      else if (role === "ceo") navigate("/ceo");
+      else navigate("/unauthorized");
     }
   };
 
+  if (user) return <p>You are already logged in.</p>;
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-100">
-      <form
-        onSubmit={handleLogin}
-        className="w-full max-w-sm rounded-lg bg-white p-6 shadow-lg"
-      >
-        <h2 className="mb-4 text-2xl font-bold">Login</h2>
-
-        {error && (
-          <p className="mb-2 text-sm text-red-500" role="alert">
-            {error}
-          </p>
-        )}
-
+    <div className="max-w-md mx-auto mt-20 p-6 border rounded shadow">
+      <h2 className="text-2xl mb-4">Login</h2>
+      {error && <p className="text-red-500 mb-2">{error}</p>}
+      <form onSubmit={handleLogin} className="flex flex-col gap-4">
         <input
           type="email"
           placeholder="Email"
-          className="mb-3 w-full rounded border px-3 py-2"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          className="border p-2 rounded"
           required
         />
-
         <input
           type="password"
           placeholder="Password"
-          className="mb-3 w-full rounded border px-3 py-2"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          className="border p-2 rounded"
           required
         />
-
-        <button
-          type="submit"
-          className="w-full rounded bg-blue-600 py-2 text-white hover:bg-blue-700"
-        >
+        <button type="submit" className="bg-blue-600 text-white p-2 rounded">
           Login
         </button>
       </form>

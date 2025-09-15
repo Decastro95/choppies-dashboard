@@ -1,13 +1,14 @@
-// src/pages/Dashboard/Manager.tsx
-import ProtectedRoute from "../../components/ProtectedRoute";
+import React from "react";
 import ManagerDashboardContent from "./ManagerDashboardContent";
-import { Roles } from "../../roles";
+import Layout from "../../components/Layout";
+import ProtectedRoute from "../../components/ProtectedRoute";
 
 export default function Manager() {
   return (
-    <ProtectedRoute allowedRoles={[Roles.MANAGER]}>
-      <ManagerDashboardContent />
+    <ProtectedRoute allowedRoles={["manager"]}>
+      <Layout>
+        <ManagerDashboardContent />
+      </Layout>
     </ProtectedRoute>
   );
 }
-

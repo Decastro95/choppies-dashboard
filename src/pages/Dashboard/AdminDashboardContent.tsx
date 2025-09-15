@@ -1,68 +1,46 @@
 // src/pages/Dashboard/AdminDashboardContent.tsx
 import { useEffect, useState } from "react";
-import { supabase } from "../../supabaseClient";
 import { Database } from "../../supabase";
-import ProtectedRoute from "../../components/ProtectedRoute";
-import { Roles } from "../../roles";
-import { AuthContext } from "../../context/AuthContext"; // fixed path
+import { supabase } from "../../supabaseClient";
+import { AuthContext, useAuth } from "../../context/AuthContext";
 
-
-type ExpiringGoods = Database["public"]["Views"]["expiring_goods_view"]["Row"];
-type DamagedGoods = Database["public"]["Views"]["damaged_goods_view"]["Row"];
+type ExpiringGoods = Database["expiring_goods_view"]["Row"];
+type DamagedGoods = Database["damaged_goods_view"]["Row"];
+type LowStock = Database["low_stock_view"]["Row"];
 
 export default function AdminDashboardContent() {
+  const { user, loading } = useAuth();
   const [expiringGoods, setExpiringGoods] = useState<ExpiringGoods[]>([]);
   const [damagedGoods, setDamagedGoods] = useState<DamagedGoods[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
+  const [lowStock, setLowStock] = useState<LowStock[]>([]);
 
   useEffect(() => {
-    async function loadData() {
-      setLoading(true);
-      const { data: expData } = await supabase
-        .from<ExpiringGoods>("expiring_goods_view")
-        .select("*");
-      const { data: dmgData } = await supabase
-        .from<DamagedGoods>("damaged_goods_view")
-        .select("*");
+    if (!loading) fetchData();
+  }, [loading]);
 
-      setExpiringGoods(expData || []);
-      setDamagedGoods(dmgData || []);
-      setLoading(false);
-    }
-    loadData();
-  }, []);
+  async function fetchData() {
+    const { data: exp } = await supabase.from("expiring_goods_view").select("*");
+    const { data: dmg } = await supabase.from("damaged_goods_view").select("*");
+    const { data: low } = await supabase.from("low_stock_view").select("*");
+
+    setExpiringGoods(exp || []);
+    setDamagedGoods(dmg || []);
+    setLowStock(low || []);
+  }
+
+  if (loading) return <p>Loading...</p>;
 
   return (
-    <ProtectedRoute allowedRoles={[Roles.ADMIN]}>
-      <div className="p-6">
-        <h1 className="text-2xl font-bold mb-4">Admin Dashboard</h1>
-        {loading ? (
-          <p>Loading...</p>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white rounded-2xl p-6 shadow">
-              <h2 className="text-lg font-bold mb-4">Expiring Goods</h2>
-              <ul>
-                {expiringGoods.map((item, idx) => (
-                  <li key={idx}>
-                    {item.product_name} — {item.days_to_expiry} days left
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-white rounded-2xl p-6 shadow">
-              <h2 className="text-lg font-bold mb-4">Damaged Goods</h2>
-              <ul>
-                {damagedGoods.map((item, idx) => (
-                  <li key={idx}>
-                    {item.product_name} — Quantity: {item.quantity}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        )}
-      </div>
-    </ProtectedRoute>
+    <div>
+      <h2>Welcome, {user?.email}</h2>
+      <h3>Expiring Goods</h3>
+      <ul>{expiringGoods.map(i => <li key={i.id}>{i.name}</li>)}</ul>
+
+      <h3>Damaged Goods</h3>
+      <ul>{damagedGoods.map(i => <li key={i.id}>{i.product_id}</li>)}</ul>
+
+      <h3>Low Stock</h3>
+      <ul>{lowStock.map(i => <li key={i.id}>{i.product_id}</li>)}</ul>
+    </div>
   );
 }

@@ -1,13 +1,14 @@
-// src/pages/Dashboard/Cashier.tsx
-import ProtectedRoute from "../../components/ProtectedRoute";
+import React from "react";
 import CashierDashboardContent from "./CashierDashboardContent";
-import { Roles } from "../../roles";
+import Layout from "../../components/Layout";
+import ProtectedRoute from "../../components/ProtectedRoute";
 
 export default function Cashier() {
   return (
-    <ProtectedRoute allowedRoles={[Roles.CASHIER]}>
-      <CashierDashboardContent />
+    <ProtectedRoute allowedRoles={["cashier"]}>
+      <Layout>
+        <CashierDashboardContent />
+      </Layout>
     </ProtectedRoute>
   );
 }
-

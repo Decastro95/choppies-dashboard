@@ -1,12 +1,14 @@
-// src/pages/Dashboard/Ceo.tsx
-import ProtectedRoute from "../../components/ProtectedRoute";
+import React from "react";
 import CeoDashboardContent from "./CeoDashboardContent";
-import { Roles } from "../../roles";
+import Layout from "../../components/Layout";
+import ProtectedRoute from "../../components/ProtectedRoute";
 
 export default function Ceo() {
   return (
-    <ProtectedRoute allowedRoles={[Roles.CEO]}>
-      <CeoDashboardContent />
+    <ProtectedRoute allowedRoles={["ceo"]}>
+      <Layout>
+        <CeoDashboardContent />
+      </Layout>
     </ProtectedRoute>
   );
 }

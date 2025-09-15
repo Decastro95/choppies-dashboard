@@ -1,13 +1,14 @@
-// src/pages/Dashboard/Supplier.tsx
-import ProtectedRoute from "../../components/ProtectedRoute";
+import React from "react";
 import SupplierDashboardContent from "./SupplierDashboardContent";
-import { Roles } from "../../roles";
+import Layout from "../../components/Layout";
+import ProtectedRoute from "../../components/ProtectedRoute";
 
 export default function Supplier() {
   return (
-    <ProtectedRoute allowedRoles={[Roles.SUPPLIER]}>
-      <SupplierDashboardContent />
+    <ProtectedRoute allowedRoles={["supplier"]}>
+      <Layout>
+        <SupplierDashboardContent />
+      </Layout>
     </ProtectedRoute>
   );
 }
-
