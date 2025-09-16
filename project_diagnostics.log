@@ -1,8 +1,8 @@
 🔹 Installing missing ESLint and TypeScript plugins...
 
-up to date, audited 413 packages in 1s
+changed 11 packages, and audited 418 packages in 8s
 
-161 packages are looking for funding
+164 packages are looking for funding
   run `npm fund` for details
 
 found 0 vulnerabilities
